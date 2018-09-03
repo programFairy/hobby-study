@@ -1,0 +1,138 @@
+/*顶部文字颜色*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/*兴趣选择浮框*/
+.choose {
+  width: 1110px;
+  height: 570px;
+  background: #fff;
+  border: 1px solid #969696;
+  position: absolute;
+  margin: 40px 115px;
+  z-index: 99;
+  display: none;
+}
+/*头部开始*/
+header {
+  background: #000;
+}
+header .w {
+  width: 1210px;
+  height: 40px;
+  margin: 0 auto;
+}
+header .location {
+  width: 350px;
+  height: 40px;
+  line-height: 40px;
+  color: #ffffff;
+  border: 1px solid #fff;
+}
+header .header_nav {
+  position: absolute;
+  top: 0;
+  right: 70px;
+  float: right;
+}
+header .header_nav li {
+  width: 100px;
+  line-height: 40px;
+  margin: 0 0 0 20px;
+  text-align: center;
+  list-style: none;
+  float: left;
+  color: #ffffff;
+  border: 1px solid #fff;
+}
+.logo {
+  width: 1210px;
+  margin: 0 auto;
+  height: 110px;
+  line-height: 110px;
+}
+/*导航部分*/
+nav {
+  width: 1210px;
+  margin: 0 auto;
+  height: 450px;
+  background: #666;
+}
+/*推荐栏*/
+.recommend {
+  width: 1230px;
+  margin: 0 auto;
+}
+.recommend .course .title {
+  font-size: 24px;
+  color: #000;
+  margin: 5px 0;
+  margin-left: 50px;
+}
+.recommend .course .courseList .courseInfo {
+  float: left;
+  width: 230px;
+  height: 280px;
+  margin: 7px;
+  border: 1px solid #cccccc;
+}
+.recommend .course .courseList .courseInfo img {
+  width: 230px;
+  height: 160px;
+  background: #999999;
+}
+.recommend .course .courseList .courseInfo .courseTitle {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 30px;
+  font-size: 20px;
+  color: #adff2f;
+}
+.recommend .course .courseList .courseInfo .courseDes {
+  height: 45px;
+  font-size: 16px;
+  color: #969696;
+  margin: 5px 0;
+}
+.recommend .course .courseList .courseInfo .courseTeacher {
+  font-size: 16px;
+  color: #000;
+}
+.recommend .leader .title {
+  font-size: 24px;
+  color: #000;
+  margin: 5px 0;
+  margin-left: 50px;
+}
+.recommend .leader .leaderInfo {
+  float: left;
+  width: 230px;
+  height: 180px;
+  margin: 7px;
+  border: 1px solid #cccccc;
+  text-align: center;
+}
+.recommend .leader .leaderInfo .leaderImg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 10px 70px;
+}
+.recommend .leader .leaderInfo .teacherName {
+  font-size: 20px;
+  color: #adff2f;
+  margin: 10px 0;
+}
+.recommend .leader .leaderInfo .teacherDes {
+  font-size: 16px;
+  color: #999;
+}
+/*底部信息栏*/
+footer {
+  width: 100%;
+  height: 80px;
+  background: #000;
+  float: left;
+}
