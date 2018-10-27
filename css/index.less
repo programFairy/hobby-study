@@ -1,21 +1,44 @@
 @w:1210px;
 @headH:40px;
-@HFcolor: #fff;/*顶部文字颜色*/
-@title:#ADFF2F;
-*{
-    margin:0;
-    padding: 0;
-}
+@text-color:#33CC34;
+
 /*兴趣选择浮框*/
 .choose{
     width: 1110px;
     height: 570px;
     background: #fff;
-    border:1px solid #969696;
-    position: absolute;
-    margin: 40px 115px;
+    position: fixed;
+    left: 120px;
+    top: 40px;
     z-index:99;
     display: none;
+    .modal-title{
+        font-size: 20px;
+    }
+    .choose_tip{
+        color: #999;
+        font-size:14px;
+        padding-left: 15px;
+    }
+    .choose_content{
+        width: 1000px;
+        height: 420px;
+        margin:0 auto;
+        padding-top:20px; 
+        border:1px solid red;
+    }
+    .choose_ok{
+        text-align: center;
+        .btn{
+            width: 150px;
+            text-align: center;
+            margin:20px 35px;
+        }
+        a{
+            color:  @text-color;
+            font-size: 14px;
+        }
+    }    
 }
 /*头部开始*/
 header{
@@ -29,23 +52,27 @@ header{
         width: 350px;
         height: @headH;
         line-height: @headH;
-        color: @HFcolor;
+        color: #fff;
         border: 1px solid #fff;
     }
     .header_nav{
         position: absolute;
         top:0;
-        right: 70px;
+        right: 50px;
         float:right;        
         li{
-            width: 100px;
+            a,a:hover{
+                color:#fff;
+                display: inline-block;
+                padding: 0 5px;
+                text-decoration: none;
+            }
+            color:#fff;
+            width: 130px;
             line-height: @headH;
-            margin:0 0 0 20px;
             text-align: center;
             list-style: none;
-            float: left;
-            color: @HFcolor;
-            border: 1px solid #fff;
+            float: left;    
         }
     }
 }
@@ -92,7 +119,7 @@ nav{
                     overflow: hidden;
                     height: 30px;
                     font-size: 20px;
-                    color: @title;
+                    color: @text-color;
                 }
                 .courseDes{
                     height: 45px;
@@ -129,7 +156,7 @@ nav{
             }
             .teacherName{
                 font-size: 20px;
-                color: @title;
+                color: @text-color;
                 margin: 10px 0;
             }
             .teacherDes{

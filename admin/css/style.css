@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/*css reset 开始*/
+ul li{
+	list-style-type: none;
+}
+input{
+	border: none;
+}
+/*css reset 结束*/
+
+/*css公共样式开始*/
+
+/*css公共样式结束*/
+
+/*login start*/
+.login{
+	width: 570px;
+	height: 320px;
+	background-color: #0077ca;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -170px 0 0 -250px;
+}
+.loginMain{
+	color: #fff;
+}
+.loginMain h1{
+	text-align: center;
+}
+.loginMain ul li{
+	padding: 10px;
+}
+.loginMain ul li .verifyCode{
+	width: 120px;
+	line-height: 30px;
+	background: #fff;
+	position: absolute;
+	margin: -30px 0 0 360px;
+	color: #000;
+	text-align: center;
+	font-size: 20px;
+}
+.loginMain ul li span{
+	display: inline-block;
+	width: 120px;
+	height: 25px;
+	text-align: right;
+}
+.loginMain ul li i{
+	display: inline-block;
+	width: 130px;
+	line-height: 30px;
+	color: #ff0000;
+	font-size: 16px;
+	margin-left: 10px;
+}
+.loginMain ul li i.vrf{
+	margin-left: 130px;
+}
+.loginMain ul li input[type="text"],.loginMain ul li input[type="password"] {
+	width: 200px;
+	height: 30px;
+	padding: 0 5px;
+}
+.loginMain ul li input[type="button"]{
+	width: 100px;
+	height: 30px;
+	position: absolute;
+	margin:0 130px;
+	border-radius: 5px;
+	background: #00497d;
+	color:#fff;
+	cursor: pointer;
+}
+.loginMain ul li input[type="button"]:hover {
+	background: #015997;
+}
+/*login end*/
