@@ -59,6 +59,13 @@ $(document).ready(function (){
 		}else{
 			$verifyInfo.text("");
 		}
-
 	})
+	
+	//login背景图获取页面高度
+	function getHeight() {
+		var bgHeight = document.getElementById('adminLogin');
+		var body_height = document.documentElement.clientHeight;
+		bgHeight.style.height = body_height + 'px';
+	}
+	getHeight();
 })

@@ -33,12 +33,13 @@
   margin: 20px 35px;
 }
 .choose .choose_ok a {
-  color: #33cc34;
+  color: #33CC34;
   font-size: 14px;
 }
 /*头部开始*/
 header {
   background: #000;
+  position: relative;
 }
 header .w {
   width: 1210px;
@@ -46,11 +47,57 @@ header .w {
   margin: 0 auto;
 }
 header .location {
-  width: 350px;
+  width: auto;
+  display: inline-block !important;
+  display: inline;
   height: 40px;
   line-height: 40px;
   color: #fff;
-  border: 1px solid #fff;
+}
+header .location .current_city {
+  padding-left: 25px;
+}
+header .location .current_city .location_icon {
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 10px;
+  left: 70px;
+  background: url('../images/iconfont/location.png') no-repeat;
+  background-position: 0 -25px;
+  background-size: 100%;
+}
+header .location .current_city .city_name {
+  color: #cfc9c9;
+}
+header .location .current_city .change_city_btn {
+  cursor: pointer;
+  margin-left: 5px;
+}
+header .location .choose_city {
+  width: auto;
+  position: absolute;
+  top: 10px;
+  left: 290px;
+  display: none;
+}
+header .location .choose_city select,
+header .location .choose_city input {
+  width: 100px;
+  height: 20px;
+  float: left;
+  margin-right: 5px;
+  text-align: center;
+}
+header .location .choose_city input {
+  width: 40px;
+  border-radius: 2px;
+  text-align: center;
+}
+header .location .choose_city input:first-of-type {
+  background: #436EEE;
+  color: #fff;
 }
 header .header_nav {
   position: absolute;
@@ -60,7 +107,7 @@ header .header_nav {
 }
 header .header_nav li {
   color: #fff;
-  width: 130px;
+  width: 100px;
   line-height: 40px;
   text-align: center;
   list-style: none;
@@ -115,7 +162,7 @@ nav {
   overflow: hidden;
   height: 30px;
   font-size: 20px;
-  color: #33cc34;
+  color: #33CC34;
 }
 .recommend .course .courseList .courseInfo .courseDes {
   height: 45px;
@@ -149,7 +196,7 @@ nav {
 }
 .recommend .leader .leaderInfo .teacherName {
   font-size: 20px;
-  color: #33cc34;
+  color: #33CC34;
   margin: 10px 0;
 }
 .recommend .leader .leaderInfo .teacherDes {

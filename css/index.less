@@ -43,17 +43,63 @@
 /*头部开始*/
 header{
     background: #000;
+    position: relative;
     .w{
         width:@w;
         height: @headH;
         margin:0 auto;
     }
     .location{
-        width: 350px;
+        width:auto; 
+        display:inline-block !important; 
+        display:inline; 
         height: @headH;
         line-height: @headH;
         color: #fff;
-        border: 1px solid #fff;
+        .current_city{
+            padding-left: 25px; 
+            .location_icon{
+                display: block;
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                top: 10px;
+                left: 70px;
+                background: url('../images/iconfont/location.png') no-repeat;
+                background-position: 0 -25px;
+                background-size: 100%;
+            }  
+            .city_name{
+                color: rgb(207, 201, 201);
+            }
+            .change_city_btn{
+                cursor: pointer;
+                margin-left: 5px;
+            } 
+        }
+        .choose_city{
+            width:auto; 
+            position: absolute;
+            top: 10px;
+            left: 290px;
+            display: none;
+            select,input{
+                width: 100px;
+                height: 20px;
+                float: left;
+                margin-right: 5px;
+                text-align:center;
+            }
+            input{
+                width: 40px;
+                border-radius: 2px;
+                text-align: center;
+            }
+            input:first-of-type{
+                background: #436EEE;
+                color: #fff;
+            } 
+        }     
     }
     .header_nav{
         position: absolute;
@@ -68,7 +114,7 @@ header{
                 text-decoration: none;
             }
             color:#fff;
-            width: 130px;
+            width: 100px;
             line-height: @headH;
             text-align: center;
             list-style: none;
