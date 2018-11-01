@@ -3,8 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>趣学网后台管理系统首页</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/enter.css">
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/css/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/css/enter.css">
 </head>
 <body>
 	<!--head star-->
@@ -13,7 +15,7 @@
 			<img src="images/logo/green-logo.png">
 			<h3>趣学网后台管理系统</h3>
 		</div>
-		<ul class="headnav left">
+		<ul class="headnav left" id="headnav">
 			<li id="menu_0"  class="current-menu">
 				<a href="#">菜单管理</a>
 			</li>
@@ -38,69 +40,282 @@
 	<!--head end-->
 
 	<!--left_menu star-->
-	<div class="leftMenu">
-		<div class="menu_detail">
+	<div class="leftMenu" id="leftmenu">
+		<div class="menu_detail" id="leftmenu_0">
 			<dl>
-				<dt>分类标题1</dt>
+				<dt>id=0标题<i class="fa fa-chevron-up"></i></dt>
 				<dd>
 					<ul>
 						<li>
-							<a href="#">子标题1</a>
+							<a href="javascript:;">子标题1</a>
 						</li>
 						<li>
-							<a href="#">子标题2</a>
+							<a href="javascript:;">子标题2</a>
 						</li>
 					</ul>
 				</dd>
 			</dl>
 			<dl>
-				<dt>分类标题2</dt>
+				<dt>分类标题2<i class="fa fa-chevron-up"></i></dt>
 				<dd>
 					<ul>
 						<li>
-							<a href="#">子标题1</a>
+							<a href="javascript:;">子标题1</a>
 						</li>
 						<li>
-							<a href="#">子标题2</a>
+							<a href="javascript:;">子标题2</a>
 						</li>
 					</ul>
 				</dd>
 			</dl>
 			<dl>
-				<dt>分类标题3</dt>
+				<dt>分类标题3<i class="fa fa-chevron-up"></i></dt>
 				<dd>
 					<ul>
 						<li>
-							<a href="#">子标题1</a>
+							<a href="javascript:;">子标题1</a>
 						</li>
 						<li>
-							<a href="#">子标题2</a>
+							<a href="javascript:;">子标题2</a>
 						</li>
 					</ul>
 				</dd>
 			</dl>
 			<dl>
-				<dt>分类标题4</dt>
+				<dt>分类标题4<i class="fa fa-chevron-up"></i></dt>
 				<dd>
 					<ul>
 						<li>
-							<a href="#">子标题1</a>
+							<a href="javascript:;">子标题1</a>
 						</li>
 						<li>
-							<a href="#">子标题2</a>
+							<a href="javascript:;">子标题2</a>
 						</li>
 					</ul>
 				</dd>
 			</dl>
 			<dl>
-				<dt>分类标题5</dt>
+				<dt>分类标题5<i class="fa fa-chevron-up"></i></dt>
 				<dd>
 					<ul>
 						<li>
-							<a href="#">子标题1</a>
+							<a href="javascript:;">子标题1</a>
 						</li>
 						<li>
-							<a href="#">子标题2</a>
+							<a href="javascript:;">子标题2</a>
+						</li>
+						<li>
+							<a href="javascript:;">子标题3</a>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+		<div class="menu_detail" id="leftmenu_1" style="display:none">
+			<dl>
+				<dt>id=1标题<i class="fa fa-chevron-down"></i></dt>
+				<dd>
+					<ul>
+						<li>
+							<a href="javascript:;">子标题1</a>
+						</li>
+						<li>
+							<a href="javascript:;">子标题2</a>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>分类标题2<i class="fa fa-chevron-down"></i></dt>
+				<dd>
+					<ul>
+						<li>
+							<a href="javascript:;">子标题1</a>
+						</li>
+						<li>
+							<a href="javascript:;">子标题2</a>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>分类标题3<i class="fa fa-chevron-down"></i></dt>
+				<dd>
+					<ul>
+						<li>
+							<a href="javascript:;">子标题1</a>
+						</li>
+						<li>
+							<a href="javascript:;">子标题2</a>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>分类标题4<i class="fa fa-chevron-down"></i></dt>
+				<dd>
+					<ul>
+						<li>
+							<a href="javascript:;">子标题1</a>
+						</li>
+						<li>
+							<a href="javascript:;">子标题2</a>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>分类标题5<i class="fa fa-chevron-down"></i></dt>
+				<dd>
+					<ul>
+						<li>
+							<a href="javascript:;">子标题1</a>
+						</li>
+						<li>
+							<a href="javascript:;">子标题2</a>
+						</li>
+						<li>
+							<a href="javascript:;">子标题3</a>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+		<div class="menu_detail" id="leftmenu_2" style="display:none">
+			<dl>
+				<dt>id=2标题<i class="fa fa-chevron-down"></i></dt>
+				<dd>
+					<ul>
+						<li>
+							<a href="javascript:;">子标题1</a>
+						</li>
+						<li>
+							<a href="javascript:;">子标题2</a>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>分类标题2<i class="fa fa-chevron-down"></i></dt>
+				<dd>
+					<ul>
+						<li>
+							<a href="javascript:;">子标题1</a>
+						</li>
+						<li>
+							<a href="javascript:;">子标题2</a>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>分类标题3<i class="fa fa-chevron-down"></i></dt>
+				<dd>
+					<ul>
+						<li>
+							<a href="javascript:;">子标题1</a>
+						</li>
+						<li>
+							<a href="javascript:;">子标题2</a>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>分类标题4<i class="fa fa-chevron-down"></i></dt>
+				<dd>
+					<ul>
+						<li>
+							<a href="javascript:;">子标题1</a>
+						</li>
+						<li>
+							<a href="javascript:;">子标题2</a>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>分类标题5<i class="fa fa-chevron-down"></i></dt>
+				<dd>
+					<ul>
+						<li>
+							<a href="javascript:;">子标题1</a>
+						</li>
+						<li>
+							<a href="javascript:;">子标题2</a>
+						</li>
+						<li>
+							<a href="javascript:;">子标题3</a>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+		<div class="menu_detail" id="leftmenu_3" style="display:none">
+			<dl>
+				<dt>id=3标题<i class="fa fa-chevron-down"></i></dt>
+				<dd>
+					<ul>
+						<li>
+							<a href="javascript:;">子标题1</a>
+						</li>
+						<li>
+							<a href="javascript:;">子标题2</a>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>分类标题2<i class="fa fa-chevron-down"></i></dt>
+				<dd>
+					<ul>
+						<li>
+							<a href="javascript:;">子标题1</a>
+						</li>
+						<li>
+							<a href="javascript:;">子标题2</a>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>分类标题3<i class="fa fa-chevron-down"></i></dt>
+				<dd>
+					<ul>
+						<li>
+							<a href="javascript:;">子标题1</a>
+						</li>
+						<li>
+							<a href="javascript:;">子标题2</a>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>分类标题4<i class="fa fa-chevron-down"></i></dt>
+				<dd>
+					<ul>
+						<li>
+							<a href="javascript:;">子标题1</a>
+						</li>
+						<li>
+							<a href="javascript:;">子标题2</a>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>分类标题5<i class="fa fa-chevron-down"></i></dt>
+				<dd>
+					<ul>
+						<li>
+							<a href="javascript:;">子标题1</a>
+						</li>
+						<li>
+							<a href="javascript:;">子标题2</a>
+						</li>
+						<li>
+							<a href="javascript:;">子标题3</a>
 						</li>
 					</ul>
 				</dd>
@@ -109,6 +324,47 @@
 	</div>
 	<!--left_menu end-->
 
-	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<!--footer star-->
+	<footer>
+
+	</footer>
+	<!--footer end-->
+
+	<script type="text/javascript" src="script/bootstrap/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="script/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('#headnav li').click(function() {
+			//点击导航模块添加class去除其他同胞元素的class
+			$(this).addClass('current-menu').siblings().removeClass('current-menu');
+			
+			//主导航与左侧导航对应
+			var headnav_index = $(this).index();//获取顶部主导航的index值
+			$('#leftmenu').find('.menu_detail').eq(headnav_index).css('display','block').siblings('.menu_detail').css('display','none')
+		})
+		
+		//左侧导航的动态效果
+		$('#leftmenu dl dt').click(function() {
+			if(false == $(this).siblings('dd').is(':visible')){
+				$(this).children().removeClass("fa-chevron-down").addClass("fa-chevron-up");
+			}else{
+				$(this).children().removeClass("fa-chevron-up").addClass("fa-chevron-down");
+			}
+			$(this).siblings('dd').slideToggle('fast');
+		})
+
+		//显示隐藏左侧导航栏
+		$('#link_1').click(function() {
+			if( $('#leftmenu').is(':visible') == false){
+				$('#leftmenu').css('display','block');
+				$(this).children('a').text('隐藏菜单')
+			}else{
+				$('#leftmenu').css('display','none');
+				$(this).children('a').text('显示菜单')
+			}
+		})
+
+	})
+	</script>
 </body>
 </html>

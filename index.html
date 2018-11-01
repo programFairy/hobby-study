@@ -5,9 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>趣学网-陪你寻找兴趣伙伴</title>
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/css/index.css">
+	<link rel="stylesheet" type="text/css" href="styles/css/reset.css">
 </head>
 <body>
 	<!--兴趣选择弹框-->
@@ -32,23 +32,22 @@
 			<div class="location ">
 				<div class="current_city" id="current_city">
 					<i class="location_icon"></i>
-					当前位置：<span class="city_name">汉中</span>
+					当前城市：<span class="city_name" id="cityName">北京市</span>
 					<div class="change_city_btn right" id="city_btn">[切换城市]</div>
 				</div>
 				<div data-toggle="distpicker" class="choose_city" id="distpicker">
 					<select id="eprovinceName" data-province="-- 选择省 --" name="provinceName"></select>
 					<select id="ecityName" data-city="-- 选择市 --" name="cityName"></select>
-					<select id="edistrictName" data-district="-- 选择区 --" name="districtName"></select>
 					<input type="button" value="确认" id="submit_city">
 					<input type="button" value="取消" id="cancel_city">
 				</div>
 			</div>
 			<ul class="header_nav">
-				<li><a href="#">登录</a>/<a href="#">注册</a></li>
-				<li><a href="#">消息通知</a></li>
-				<li><a href="#">我的学习</a></li>
-				<li><a href="#">申请成为领学者</a></li>
-				<li><a href="#">个人中心</a></li>
+				<li id="header_nav_0"><a href="#">登录</a>/<a href="#">注册</a></li>
+				<li id="header_nav_1"><a href="#">消息通知</a></li>
+				<li id="header_nav_2"><a href="#">我的学习</a></li>
+				<li id="header_nav_3"><a href="#">申请成为领学者</a></li>
+				<li id="header_nav_4"><a href="#">个人中心</a></li>
 			</ul>
 		</div>
 	</header>
@@ -209,9 +208,9 @@
 		
 	</footer>
 
-	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript"  src="js/bootstrap.min.js"></script>
-	<script type="text/javascript"  src="js/index.js"></script>
-	<script type="text/javascript"  src="js/model/distpicker.js"></script>
+	<script type="text/javascript" src="script/bootstrap/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript"  src="script/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript"  src="script/index.js"></script>
+	<script type="text/javascript"  src="script/model/distpicker.js"></script>
 </body>
 </html>
