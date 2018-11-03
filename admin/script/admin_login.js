@@ -26,41 +26,59 @@ $(document).ready(function (){
 
 
 	//表单验证
-	$('input[name="login_btn"]').click(function(){
-		var $name = $('input[name="adminName"]');
-		var $psw = $('input[name="password"]');
-		var $verify = $('input[name="verify"]');
-		var $nameInfo = $(".nameInfo");
-		var $pswInfo = $(".pswInfo");
-		var $verifyInfo = $(".verifyInfo");
-		var _name = $.trim($name.val());
-		var _psw = $.trim($psw.val());
-		var _verify = $.trim($verify.val());
-		if(_name == "") {
-			$nameInfo.text("用户名不能为空！");
-			$name.focus();
-			return;
-		}else{
-			$nameInfo.text("");
-		}
-		
-		if(_psw == "") {
-			$pswInfo.text("密码不能为空！");
-			$psw.focus();
-			return;
-		}else{
-			$pswInfo.text("");
-		}
+	var name_psw =  new RegExp(/^[A-Z0-9a-z]{6,12}$/);
 
-		if(_verify == "") {
-			$verifyInfo.text("请输入验证码！");
+    $('input[name="adminName"]').blur(function() {
+        var $name = $('input[name="adminName"]');
+        var name_val = $.trim($name.val());
+        var name_error = $('#name_error');
+         //验证用户名
+         if(name_val == ""){
+            name_error.text('*用户名不能为空');
+            $name.focus();
+            return;
+        }else if(name_psw.test(name_val)){
+            name_error.text('');
+        }else{
+            name_error.text('*用户名必须为6-12位数字或字母');
+            $name.focus();
+            return;
+        };
+    });
+    $('input[name="password"]').blur(function() {
+        var $psw = $('input[name="password"]');     
+        var psw_val = $.trim($psw.val());
+        var psw_error = $('#psw_error');
+        //验证密码；
+        if(psw_val == ""){
+            psw_error.text('*密码不能为空');
+            $psw.focus();
+            return;
+        }else if(name_psw.test(psw_val)){
+            psw_error.text('');
+        }else{
+            psw_error.text('*密码必须为6-12位数字或字母');
+            $psw.focus();
+            return;
+        };
+    });
+	$('input[name="verify"]').blur(function() {
+		var verCode = $('#verCode').text();
+		var $verify = $('input[name="verify"]');
+		var verify_txt = $.trim($verify.val());
+		var verify_error = $('#verify_error');
+		if(verify_txt == ""){
+            verify_error.text('*验证码不能为空');
+            $verify.focus();
+            return;
+        }else if(verify_txt.toLowerCase() === verCode.toLowerCase()){
+            verify_error.text('');
+        }else{
+            verify_error.text('*验证码错误');
 			$verify.focus();
-			return;
-		}else{
-			$verifyInfo.text("");
-		}
+            return;
+        };
 	})
-	
 	//login背景图获取页面高度
 	function getHeight() {
 		var bgHeight = document.getElementById('adminLogin');

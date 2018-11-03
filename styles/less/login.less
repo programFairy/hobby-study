@@ -1,5 +1,6 @@
 @charset 'UTF-8';
 @mainColor:#35AE35;
+@error: #E5224C;
 body{
     background-image: url(../../images/login/login_bg.jpeg);
     background-repeat: no-repeat;
@@ -31,7 +32,7 @@ input{
         .loginWay{
             width: 410px;
             height: 30px;
-            margin-top:15px;
+            margin:10px 0;
             border-bottom: 1px solid #999;
             .userLogin,.phoneLogin{
                 font-size: 18px;
@@ -51,12 +52,18 @@ input{
         }
         .loginForm{
             position: relative;
+            .input-error{
+                color: @error;
+                height: 20px;
+                line-height: 20px;
+                font-size: 16px;
+            }
             .userIcon,.pswIcon,.phoneIcon,.verifyIcon{
                 width: 25px;
                 height: 25px;
                 position: absolute;
                 font-size: 20px;
-                margin: 40px 0 0 15px;
+                margin: 32px 0 0 15px;
                 background: url('../../images/iconfont/login_ico.png') no-repeat;
                 background-size: 100%;
             }
@@ -74,14 +81,14 @@ input{
                 line-height: 30px;
                 position: absolute;
                 background: @mainColor;
-                margin: 40px -145px;
+                margin: 32px -145px;
                 border:0;
                 border-radius: 25px;
             }
            .inputBox{
                 width: 400px;
                 height: 50px;
-                margin-top:30px;
+                margin-top:20px;
                 text-indent: 50px;
                 border: 1px solid rgb(97, 94, 94);
             }
@@ -89,7 +96,7 @@ input{
                 border: 1px solid @mainColor;
             }
             .commitcode_new{
-                margin-top:25px; 
+                margin-top:15px; 
                 .forgotPsw{
                     float: right;
                     color: #666;
@@ -108,7 +115,7 @@ input{
                 .loginText{
                     width: 400px;
                     height: 50px;
-                    margin-top:25px;
+                    margin-top:15px;
                     background-color: @mainColor;
                     color: #fff;
                     border:0;

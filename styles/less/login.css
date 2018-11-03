@@ -47,7 +47,7 @@ input {
 .content .loginBox .loginWay .underline {
   width: 205px;
   height: 2px;
-  background-color: #35ae35;
+  background-color: #35AE35;
   position: absolute;
   margin-top: 28px;
 }
@@ -55,7 +55,7 @@ input {
   position: relative;
 }
 .content .loginBox .loginForm .input-error {
-  color: #e5224c;
+  color: #E5224C;
   height: 20px;
   line-height: 20px;
   font-size: 16px;
@@ -85,7 +85,7 @@ input {
   width: 135px;
   line-height: 30px;
   position: absolute;
-  background: #35ae35;
+  background: #35AE35;
   margin: 32px -145px;
   border: 0;
   border-radius: 25px;
@@ -98,7 +98,7 @@ input {
   border: 1px solid #615e5e;
 }
 .content .loginBox .loginForm .inputBox:hover {
-  border: 1px solid #35ae35;
+  border: 1px solid #35AE35;
 }
 .content .loginBox .loginForm .commitcode_new {
   margin-top: 15px;
@@ -120,7 +120,7 @@ input {
   width: 400px;
   height: 50px;
   margin-top: 15px;
-  background-color: #35ae35;
+  background-color: #35AE35;
   color: #fff;
   border: 0;
   font-size: 20px;
@@ -130,7 +130,7 @@ input {
   margin-top: 15px;
 }
 .content .loginBox .loginForm .agree_document a {
-  color: #35ae35;
+  color: #35AE35;
 }
 .content .loginBox .loginForm .otherWay {
   text-align: center;
