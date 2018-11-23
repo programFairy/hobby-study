@@ -1,10 +1,9 @@
 @charset 'UTF-8';
-@mainColor:#35AE35;
-@error: #E5224C;
+@import './variable.less';
 body{
     background-image: url(../../images/login/login_bg.jpeg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 ul li{
     list-style-type: none;
@@ -13,11 +12,15 @@ ul li{
 input{
     outline: none;
 }
+.errorIco{
+    background: url('../../images/iconfont/error.png') no-repeat left center;
+    background-size: 30px 21px; 
+}
 .content{
     width: 450px;
     margin:20px auto;
     .loginBox{
-        height: 580px;
+        height: auto;
         background-color: #fff;
         opacity: 0.8;
         position: relative;
@@ -25,7 +28,6 @@ input{
         .login_logo{
             text-align: center;
             .logoImg{
-                width: 80px;
                 height: 80px;
             }
         } 
@@ -53,17 +55,18 @@ input{
         .loginForm{
             position: relative;
             .input-error{
+                width: auto;
                 color: @error;
-                height: 20px;
-                line-height: 20px;
                 font-size: 16px;
+                display: block;
+                padding: 5px 0px 0px 30px;
             }
             .userIcon,.pswIcon,.phoneIcon,.verifyIcon{
                 width: 25px;
                 height: 25px;
                 position: absolute;
                 font-size: 20px;
-                margin: 32px 0 0 15px;
+                margin: 28px 0 0 15px;
                 background: url('../../images/iconfont/login_ico.png') no-repeat;
                 background-size: 100%;
             }
@@ -79,20 +82,19 @@ input{
             .getCode{
                 width: 135px;
                 line-height: 30px;
-                position: absolute;
                 background: @mainColor;
-                margin: 32px -145px;
+                margin: 20px 0 0 -145px;
                 border:0;
                 border-radius: 25px;
             }
            .inputBox{
                 width: 400px;
                 height: 50px;
-                margin-top:20px;
+                margin-top:15px;
                 text-indent: 50px;
                 border: 1px solid rgb(97, 94, 94);
             }
-            .inputBox:hover {
+            .inputBox:active, .inputBox:focus {
                 border: 1px solid @mainColor;
             }
             .commitcode_new{
@@ -101,6 +103,9 @@ input{
                     float: right;
                     color: #666;
                     text-decoration: none
+                }
+                .forgotPsw:hover{
+                    color: @color-hover;
                 }
                 #rememberPsw{
                     display: block;
@@ -126,7 +131,8 @@ input{
                 text-align: center;
                 margin-top: 15px;
                 a{
-                    color: @mainColor;
+                    color: #000;
+                    font-weight: bold;
                 }
             }
             .otherWay{
@@ -138,12 +144,23 @@ input{
                     cursor: pointer;
                 }
             }
-            .backIndex a{
-                text-decoration: none;
-                float: right;
-                margin-right: 10px;
-                color: #666;
-            }
+            .back{
+                height: 20px;
+                line-height: 20px;
+                .register{
+                    display: inline-block;
+                    margin-left: 195px;
+                }
+                a{
+                    float: right;
+                    margin-right: 10px;
+                    color: #666;
+                }
+                a:hover{
+                    text-decoration: none;
+                    color: @color-hover;
+                }
+            } 
         }
     }
 }

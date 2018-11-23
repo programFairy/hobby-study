@@ -6,7 +6,7 @@ body {
 }
 .register_wrap {
   position: relative;
-  margin: 50px auto;
+  margin: 70px auto;
   width: 430px;
   min-height: 200px;
   z-index: 100;
@@ -28,13 +28,12 @@ body {
   position: relative;
 }
 .register_wrap h1 img {
-  width: 80px;
   height: 80px;
 }
 .register_wrap h1:after {
   font-size: 20px;
-  color: #35ae35;
-  content: '趣学';
+  color: #393939;
+  content: '&';
   text-align: center;
   display: block;
   width: 100%;
@@ -75,7 +74,7 @@ body {
 .register_wrap input:not([type="button"]):active,
 .register_wrap input:not([type="button"]):focus {
   background: #F7F7F7;
-  border: dashed 1px #35ae35;
+  border: dashed 1px #fdd102;
 }
 .register_wrap input[type="button"] {
   width: 120px;
@@ -88,21 +87,7 @@ body {
 .register_wrap input[type="button"]:hover,
 .register_wrap input[type="button"]:active,
 .register_wrap input[type="button"]:focus {
-  background: #35ae35;
-}
-.register_wrap input[name="verifycode"] {
-  width: 240px;
-}
-.register_wrap .verify {
-  width: 100px;
-  text-align: center;
-  height: 30px;
-  background: #BABABA;
-  position: absolute;
-  margin-top: -30px;
-  margin-left: 270px;
-  color: #e5224c;
-  cursor: pointer;
+  background: #fdd102;
 }
 .register_wrap ::-webkit-input-placeholder {
   color: #BABABA;
@@ -128,6 +113,42 @@ body {
   background: url('../../images/iconfont/error.png') no-repeat;
   background-size: 35px 25px;
   background-position: left 3px;
+}
+.register_wrap .otherway {
+  cursor: pointer;
+}
+.register_wrap .otherway label {
+  padding: 0 0 5px;
+}
+.register_wrap .otherway .qq {
+  width: 30px;
+  height: 30px;
+  background: url(../../images/iconfont/QQ.png) no-repeat left center;
+  background-size: 100%;
+}
+.register_wrap .otherway .qq:hover {
+  background: url(../../images/iconfont/icon_QQ.png) no-repeat left center;
+  background-size: 100%;
+}
+.register_wrap .otherway .wechat {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  margin: -29px 50px;
+  background: url(../../images/iconfont/wechat_border.png) no-repeat;
+  background-size: 100%;
+}
+.register_wrap .otherway .wechat:hover {
+  width: 29px;
+  height: 29px;
+  background: url(../../images/iconfont/wechat.png) no-repeat;
+  background-size: 100%;
+}
+.register_wrap .otherway a {
+  display: inline-block;
+  float: right;
+  margin-top: -25px;
+  font-size: 14px;
 }
 .register_wrap:after {
   background: #F9F9F9;

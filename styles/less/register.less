@@ -1,5 +1,4 @@
-@mainColor: #35AE35;
-@error: #E5224C;
+@import './variable.less';
 body{
     background: url("../../images/login/bg.jpg") no-repeat;
     background-size: 100%; 
@@ -8,7 +7,7 @@ body{
 }
 .register_wrap{
     position:relative;
-    margin:50px auto;    
+    margin:70px auto;    
     width:430px;
     min-height:200px;
     z-index:100;
@@ -23,14 +22,13 @@ body{
         padding:0px;
         position:relative;
         img{
-            width: 80px;
             height: 80px;
         }
     }
     h1:after {
         font-size:20px;
-        color: @mainColor;
-        content: '趣学'; 
+        color: #393939;
+        content: '&'; 
         text-align:center;
         display:block;
         width:100%;
@@ -77,20 +75,21 @@ body{
     input[type="button"]:hover,input[type="button"]:active,input[type="button"]:focus{
         background: @mainColor;
     }
-    input[name="verifycode"]{
-        width: 240px;
-    }
-    .verify{
-        width: 100px;
-        text-align: center;
-        height: 30px;
-        background: #BABABA;
-        position: absolute;
-        margin-top: -30px;
-        margin-left: 270px;
-        color: @error;
-        cursor: pointer;
-    }
+    //验证码样式
+    // input[name="verifycode"]{
+    //     width: 240px;
+    // }
+    // .verify{
+    //     width: 100px;
+    //     text-align: center;
+    //     height: 30px;
+    //     background: #BABABA;
+    //     position: absolute;
+    //     margin-top: -30px;
+    //     margin-left: 270px;
+    //     color: @error;
+    //     cursor: pointer;
+    // }
     /* placeholder */
     ::-webkit-input-placeholder  { 
     color:#BABABA; 
@@ -115,6 +114,42 @@ body{
             background: url('../../images/iconfont/error.png') no-repeat;
             background-size: 35px 25px;
             background-position: left 3px;
+        }
+    }
+    .otherway{
+        cursor: pointer;
+        label{
+            padding: 0 0 5px;
+        }
+        .qq{
+            width: 30px;
+            height: 30px;
+            background: url(../../images/iconfont/QQ.png) no-repeat left center;
+            background-size: 100%; 
+        }
+        .qq:hover{
+            background: url(../../images/iconfont/icon_QQ.png) no-repeat left center;
+            background-size: 100%; 
+        }
+        .wechat{
+            width: 27px;
+            height: 27px;
+            position: absolute;
+            margin: -29px 50px;
+            background: url(../../images/iconfont/wechat_border.png) no-repeat;
+            background-size: 100%; 
+        }
+        .wechat:hover{
+            width: 29px;
+            height: 29px;
+            background: url(../../images/iconfont/wechat.png) no-repeat;
+            background-size: 100%; 
+        }
+        a{
+            display: inline-block;
+            float: right;
+            margin-top: -25px;
+            font-size: 14px;
         }
     }
 }

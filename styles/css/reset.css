@@ -16,9 +16,11 @@ table {border-collapse: collapse;border-spacing: 0;}
 /**公共样式开始**/
 body,th,td,button,input,select,textarea {font: 12px/1.62 "Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,tahoma,arial,Verdana,sans-serif;color: #333;border:0}
 ol,ul,li {list-style: none;}
-input{border:none;}
+input{border:none;outline: 0;}
 img {border:0;vertical-align:middle;}
-a {text-decoration: none;outline:none;}
+a {text-decoration: none;outline:none;color: #424242;}
+a:hover, a:active{text-decoration: none;color: #FFD700;}
+a:visited, a:link{text-decoration:none; }/*指已经访问过的链接*/
 h1 {font-size:36px;}
 h2 {font-size:30px;}
 h3 {font-size:24px;}

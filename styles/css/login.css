@@ -2,7 +2,7 @@
 body {
   background-image: url(../../images/login/login_bg.jpeg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 ul li {
   list-style-type: none;
@@ -11,12 +11,16 @@ ul li {
 input {
   outline: none;
 }
+.errorIco {
+  background: url('../../images/iconfont/error.png') no-repeat left center;
+  background-size: 30px 21px;
+}
 .content {
   width: 450px;
   margin: 20px auto;
 }
 .content .loginBox {
-  height: 580px;
+  height: auto;
   background-color: #fff;
   opacity: 0.8;
   position: relative;
@@ -26,7 +30,6 @@ input {
   text-align: center;
 }
 .content .loginBox .login_logo .logoImg {
-  width: 80px;
   height: 80px;
 }
 .content .loginBox .loginWay {
@@ -47,7 +50,7 @@ input {
 .content .loginBox .loginWay .underline {
   width: 205px;
   height: 2px;
-  background-color: #35ae35;
+  background-color: #fdd102;
   position: absolute;
   margin-top: 28px;
 }
@@ -55,10 +58,11 @@ input {
   position: relative;
 }
 .content .loginBox .loginForm .input-error {
+  width: auto;
   color: #e5224c;
-  height: 20px;
-  line-height: 20px;
   font-size: 16px;
+  display: block;
+  padding: 5px 0px 0px 30px;
 }
 .content .loginBox .loginForm .userIcon,
 .content .loginBox .loginForm .pswIcon,
@@ -68,7 +72,7 @@ input {
   height: 25px;
   position: absolute;
   font-size: 20px;
-  margin: 32px 0 0 15px;
+  margin: 28px 0 0 15px;
   background: url('../../images/iconfont/login_ico.png') no-repeat;
   background-size: 100%;
 }
@@ -84,21 +88,21 @@ input {
 .content .loginBox .loginForm .getCode {
   width: 135px;
   line-height: 30px;
-  position: absolute;
-  background: #35ae35;
-  margin: 32px -145px;
+  background: #fdd102;
+  margin: 20px 0 0 -145px;
   border: 0;
   border-radius: 25px;
 }
 .content .loginBox .loginForm .inputBox {
   width: 400px;
   height: 50px;
-  margin-top: 20px;
+  margin-top: 15px;
   text-indent: 50px;
   border: 1px solid #615e5e;
 }
-.content .loginBox .loginForm .inputBox:hover {
-  border: 1px solid #35ae35;
+.content .loginBox .loginForm .inputBox:active,
+.content .loginBox .loginForm .inputBox:focus {
+  border: 1px solid #fdd102;
 }
 .content .loginBox .loginForm .commitcode_new {
   margin-top: 15px;
@@ -107,6 +111,9 @@ input {
   float: right;
   color: #666;
   text-decoration: none;
+}
+.content .loginBox .loginForm .commitcode_new .forgotPsw:hover {
+  color: #ffd700;
 }
 .content .loginBox .loginForm .commitcode_new #rememberPsw {
   display: block;
@@ -120,7 +127,7 @@ input {
   width: 400px;
   height: 50px;
   margin-top: 15px;
-  background-color: #35ae35;
+  background-color: #fdd102;
   color: #fff;
   border: 0;
   font-size: 20px;
@@ -130,7 +137,8 @@ input {
   margin-top: 15px;
 }
 .content .loginBox .loginForm .agree_document a {
-  color: #35ae35;
+  color: #000;
+  font-weight: bold;
 }
 .content .loginBox .loginForm .otherWay {
   text-align: center;
@@ -142,9 +150,20 @@ input {
   margin: 10px 20px 5px 20px;
   cursor: pointer;
 }
-.content .loginBox .loginForm .backIndex a {
-  text-decoration: none;
+.content .loginBox .loginForm .back {
+  height: 20px;
+  line-height: 20px;
+}
+.content .loginBox .loginForm .back .register {
+  display: inline-block;
+  margin-left: 195px;
+}
+.content .loginBox .loginForm .back a {
   float: right;
   margin-right: 10px;
   color: #666;
+}
+.content .loginBox .loginForm .back a:hover {
+  text-decoration: none;
+  color: #ffd700;
 }

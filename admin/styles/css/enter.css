@@ -1,4 +1,5 @@
 @charset 'utf-8';
+/*enter_head star*/
 .enter_head {
   height: 60px;
   background: #438eb9;
@@ -73,26 +74,30 @@
 /*leftmenu star*/
 .leftMenu {
   width: 180px;
-  height: 600px;
+  height: 570px;
   position: absolute;
   top: 60px;
   left: 0;
+  overflow: hidden;
   border-right: 1px solid #b8c8d2;
 }
-.leftMenu .hidden_menu {
-  display: none;
-  width: 30px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  font-size: 24px;
-  border: 1px solid #b8c8d2;
-  background: #f9f9f9;
-  position: absolute;
-  margin-top: 230px;
-  margin-left: 150px;
-  z-index: 99;
-  cursor: pointer;
+.leftMenu .menu_detail dl.collapsed dt {
+  background: #f9f9f9 url(../../images/down.png) no-repeat;
+  background-position: right center;
+  background-size: 20%;
+}
+.leftMenu .menu_detail dl dd ul li a.current_right,
+.leftMenu .menu_detail dl dd ul li a:hover {
+  color: #438eb9;
+  background: #e0eeee url('../../images/right.png') no-repeat;
+  background-size: 10%;
+  background-position: 150px center;
+  text-decoration: none;
+  border-top: 1px solid #b8c8d2;
+  border-bottom: 1px solid #b8c8d2;
+}
+.leftMenu .menu_detail dl {
+  overflow: hidden;
 }
 .leftMenu .menu_detail dl dt {
   width: 179px;
@@ -102,15 +107,10 @@
   font-size: 14px;
   font-weight: bold;
   color: #585858;
-  background: #f9f9f9;
+  background: #f9f9f9 url(../../images/up.png) no-repeat;
+  background-position: right center;
+  background-size: 20%;
   cursor: pointer;
-}
-.leftMenu .menu_detail dl dt .fa-chevron-down,
-.leftMenu .menu_detail dl dt .fa-chevron-up {
-  display: block;
-  line-height: 30px;
-  float: right;
-  margin-right: 10px;
 }
 .leftMenu .menu_detail dl dd ul li {
   line-height: 35px;
@@ -121,15 +121,27 @@
   text-indent: 20px;
   color: #333;
 }
-.leftMenu .menu_detail dl dd ul li a:hover {
-  width: 180px;
-  background: #438eb9;
-  color: #fff;
-  text-decoration: none;
-  border-top: 1px solid #b8c8d2;
-  border-bottom: 1px solid #b8c8d2;
+.leftMenu .menu_detail .collapsed {
+  height: 35px;
 }
 /*leftmenu end*/
+/*iframe star*/
+.rightmain {
+  position: absolute;
+  left: 180px;
+  top: 60px;
+  right: 0;
+  bottom: 30px;
+  overflow: hidden;
+}
+.rightmain .right_content {
+  height: 100%;
+}
+.rightmain .right_content iframe {
+  width: 100%;
+  height: 100%;
+}
+/*iframe end*/
 /*footer star*/
 footer {
   width: 100%;
