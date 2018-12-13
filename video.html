@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{视频名}}</title>
+    <link rel="shortcut icon" href="light_favicon@32.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/css/reset.css">
+    <link rel="stylesheet" href="styles/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/css/video.css">
+     <!-- 社会化分享 -->
+     <link rel="stylesheet" href="lib/css/share.css">
+</head>
+<body>
+    <!-- 引入头部 -->
+    <iframe src="common/header.html" width="100%" height="80px" frameborder="0" scrolling="no"></iframe>
+
+    <!-- 视频播放/相关推荐 -->
+    <section class="video_wrap cf">
+        <div class="video_box lf">
+            <video src="images/video/cont-1325890-11542974-154101-hd.mp4" controls="controls"></video>
+            <div class="video_info">
+                <span class="video_title">视频名称</span>
+                <span class="share_btn"></span>
+                <a href="leader.html" class="video_user">
+                    <img src="./images/iconfont/default1.png"  class="profile">
+                    <span class="user_name">{{用户昵称}}</span>
+                </a>
+            </div>
+            <!-- 评论 -->
+            <div class="pl">评论区域</div>
+        </div>
+        <!-- 相关视频推荐 -->
+        <div class="other_video rt">
+            <h4>其他相关推荐</h4>
+            <ul class="other_video_list">
+                <li>
+                    <a href="javascript:;">
+                        <div class="video_box lf">
+                            <video src="./images/video/when-it-rains-it-pours.mp4" class="video_link">
+                            </video>
+                        </div>
+                        <div class="video_info lf">
+                            <sapn class="video_name">{{视频名称}}</sapn>
+                            <span class="user_name">{{用户昵称}}</span>
+                            <span class="play_num"><i class="glyphicon glyphicon-expand"></i>568</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="video_box lf">
+                            <video src="./images/video/when-it-rains-it-pours.mp4" class="video_link">
+                            </video>
+                        </div>
+                        <div class="video_info lf">
+                            <sapn class="video_name">{{视频名称}}</sapn>
+                            <span class="user_name">{{用户昵称}}</span>
+                            <span class="play_num"><i class="glyphicon glyphicon-expand"></i>568</span>
+                        </div>
+                    </a>
+                </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div class="video_box lf">
+                                <video src="./images/video/when-it-rains-it-pours.mp4" class="video_link">
+                                </video>
+                            </div>
+                            <div class="video_info lf">
+                                <sapn class="video_name">{{视频名称}}</sapn>
+                                <span class="user_name">{{用户昵称}}</span>
+                                <span class="play_num"><i class="glyphicon glyphicon-expand"></i>568</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div class="video_box lf">
+                                <video src="./images/video/when-it-rains-it-pours.mp4" class="video_link"">
+                                </video>
+                            </div>
+                            <div class="video_info lf">
+                                <sapn class="video_name">{{视频名称}}</sapn>
+                                <span class="user_name">{{用户昵称}}</span>
+                                <span class="play_num"><i class="glyphicon glyphicon-expand"></i>568</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div class="video_box lf">
+                                <video src="./images/video/when-it-rains-it-pours.mp4" class="video_link">
+                                </video>
+                            </div>
+                            <div class="video_info lf">
+                                <sapn class="video_name">{{视频名称}}</sapn>
+                                <span class="user_name">{{用户昵称}}</span>
+                                <span class="play_num"><i class="glyphicon glyphicon-expand"></i>568</span>
+                            </div>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </section>
+
+     <!-- 引入底部 -->
+     <iframe src="common/footer.html" style="display:block;" frameborder="0" width="100%" height="85px"></iframe>
+     
+     <script src="script/bootstrap/jquery-3.2.1.min.js"></script>
+      <!-- 社会化分享 -->
+    <script src="lib/js/share.js"></script>
+     <script>
+         window.onload = function(){
+            //  初始分享
+            $(".share_btn").socialShare({
+                content: '',
+                url:'',
+                titile:''
+            });
+         }
+     </script>
+</body>
+</html>

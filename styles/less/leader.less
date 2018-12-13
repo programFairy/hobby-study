@@ -1,0 +1,609 @@
+@import './variable.less';
+
+.homepage_wrap{
+    width: 100%;
+    height: 520px;
+    background: url('../../images/bg/pexels-photo-378152.jpeg') no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    .homepage_content{
+        width: 100%;
+        height: 520px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top:0;
+        bottom: 0;
+        background: rgba(88, 80, 80, 0.6);  
+        .homepage_info{        
+            width: 1210px;
+            height: 520px;
+            margin: 0 auto;
+            .homepage_profile_photo{
+                width: 150px;
+                height: 150px;
+                border-radius: 100px;
+                margin-left: 530px;
+                margin-top: 50px;
+            }
+            .homepage_leader_name{
+                font-size: 20px;
+                text-align: center;
+                line-height: 40px;
+                color: @text-color;
+            }
+            .homepage_label_words{
+                text-align: center;
+                font-size: 14px;
+                line-height: 30px;
+            }
+            .btns{
+                width: 400px;
+                margin-left: 430px;
+                .favorite_btn, .chat_sx,.tip-off{
+                    // display: inline-block;
+                    float: left;
+                    cursor: pointer;
+                    width: 80px;
+                    height: 30px;
+                    line-height: 30px;
+                    border:1px solid #fff;
+                    border-radius: 25px;
+                    padding: 0 10px;
+                    text-align: center;
+                    // margin:15px 560px;
+                    color: #fff;
+                    margin: 15px;
+                }
+                .favorite_btn:hover, .chat_sx:hover,.tip-off:hover{
+                    color: @color-hover;
+                    border:1px solid @mainColor;
+                }
+            }
+            .simple_introduction{
+                padding:15px 150px;
+                line-height: 25px;
+                min-height: 30px;
+                max-height: 95px;
+                overflow: hidden;
+                color: rgb(202, 192, 223);
+            }
+            .fan_num{
+                width: 70px;
+                text-align: center;
+                height: 60px;
+                line-height: 30px;
+                position: absolute;
+                margin-left: 570px;
+                span{
+                    display: block;
+                    color:#fff;
+                }
+                span.num{
+                    font-size: 20px;
+                }
+            }
+        }
+        .bottom-photo{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 137px;
+            background: url('../../images/bg/arrow-lr.png') no-repeat center;
+            z-index: 1;
+        }
+      
+    }   
+}
+.homepage_tablist_wrap{
+    position: relative;
+    width: 100%;
+    min-height: 380px;
+    background: #f3f5f7;
+    padding: 25px 0;
+    .homepage_tab_content{
+        width: 930px;
+        margin:0 auto;
+        .tab_content_left{
+            width: 200px;
+            min-height: 420px;
+            float: left;
+            ul li{
+                text-indent: 60px;
+                width: 160px;
+                height: 50px;
+                line-height: 50px;
+                a{
+                    font-size: 20px;
+                    color: #787d82;
+                    position: relative;
+                    display: block;
+                }
+                a:hover{
+                    text-decoration: none;
+                    color: @color-hover;
+                }
+                a:active, a:link{
+                    text-decoration: none;
+                }
+            }
+            ul li:first-child a{
+                background: url(../../images/iconfont/dt.png) no-repeat 10px;
+                background-size: 30px 30px;
+            }
+            ul li:nth-child(2) a{
+                background: url(../../images/iconfont/leader_kc.png) no-repeat 10px;
+                background-size: 30px 30px;
+            }
+            ul li.active{
+                background: url('');
+                background: @mainColor;
+                border-radius: 8px 0 0 8px;
+                a{
+                    color: #fff;
+                }
+            }
+            ul li.active a:after{
+                position: absolute;
+                height: 0;
+                border-top: 25px solid #f3f5f7;
+                border-bottom: 25px solid #f3f5f7;
+                display: block;
+                content: "";
+                bottom: 0;
+                right: 0;
+                width: 0;
+                border-left: 15px solid transparent;
+            }
+        }
+        .tab_content_right{
+            float: left;
+            width: 720px;
+            min-height: 580px;
+            background:#fff;
+            padding: 20px 30px;
+            // 动态
+            .user_homepage_moments{
+                // 发布动态：如果是本人的显示若非本人则隐藏；
+                .publish_wrap{    
+                    position: relative;  
+                     //用户输入内容框    
+                    .publish_input_content{
+                        width: 100%;
+                        height: 90px;
+                        border:1px solid #999;
+                        border-radius: 8px;
+                        resize: none;
+                        outline: none;
+                        padding: 5px;
+                        margin-bottom: 10px;
+                    }
+                    // 发布动态按钮：表情/图片/视频/发布
+                    .publish_btn{
+                        height: 30px;
+                        margin-top: 10px;
+                        input[type="submit"]{
+                            width: 70px;
+                            height: 30px;
+                            line-height: 30px;
+                            border-radius: 8px;
+                            letter-spacing: 5px;
+                            text-align: center;
+                            background: @mainColor;
+                            color: #fff;
+                            float: right;
+                            margin-top: -25px;
+                        }
+                        .video_btn,.img_btn{
+                            cursor: pointer;
+                            width: 27px;
+                            height: 27px;
+                            position: absolute;
+                            margin-left: 40px;
+                            background: url('../../images/iconfont/video.png') no-repeat left;
+                            background-size: 100%;
+                            border-radius: 25px;
+                        }
+                        .img_btn{
+                            width: 25px;
+                            height: 25px;
+                            position: relative;
+                            border-radius: 0;
+                            margin-left: 80px;
+                            background: url('../../images/iconfont/img_btn.png') no-repeat left;
+                            -webkit-background-size: cover;
+                            background-size: cover;
+                            .input_file_photo{
+                                position: absolute;
+                                right: 0;
+                                top:0;
+                                width: 100%;
+                                height: 100%;
+                                opacity: 0;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                // 上传视频框
+                .video_file_wrap{
+                    z-index: 99;
+                    display: none;
+                    width: 400px;
+                    height: 120px;
+                    background: #f3f5f7;
+                    border-radius: 8px;
+                    // border:1px solid #666;
+                    position: absolute;
+                    margin-left: 40px;
+                    .upload_way{
+                        width: 100%;
+                        height: 38px;
+                        line-height: 35px;
+                        // padding-bottom: 5px;
+                        padding-right: 15px;
+                        border-bottom: 1px solid #d4d8db;
+                        .local_way, .url_way{
+                            display: inline-block;
+                            font-size: 16px;
+                            margin: 0 15px;
+                            color: #000;
+                        }
+                        .close{
+                            width: 25px;
+                            height: 25px;
+                            float:right;
+                            background: url(../../images/iconfont/close_black.png) no-repeat left;
+                            background-size: 100%;
+                            margin-top: 5px;
+                        }
+                        a:hover,a:active{
+                            color: @mainColor;
+                            text-decoration: none;
+                        }
+                        .active{
+                            color: @text-color;
+                            border-bottom: 2px solid @mainColor;
+                        }
+                    }
+                    .local_choose{
+                        .onload_video_btn{
+                            position: relative;
+                            color: #fff;
+                            height: 30px;
+                            line-height: 30px;
+                            width: 140px;
+                            padding: 0 5px;
+                            text-indent: 30px;
+                            background:@mainColor url(../../images/iconfont/local_onload.png) no-repeat 5px;
+                            background-size: 25px 25px;
+                            margin: 20px 120px;
+                            outline: none;
+                            .input_file_video{
+                                position: absolute;
+                                top:0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                opacity: 0;
+                                cursor: pointer;
+                            }
+                        }
+                       
+                    }
+                    .url_content{
+                        display: none;
+                        padding: 5px 15px;
+                        input[type="url"]{
+                            width: 300px;
+                            height: 30px;
+                            margin: 20px 10px;
+                            outline: none;
+                            text-indent: 10px;
+                            border:1px solid @mainColor;
+                        }
+                        input[type="submit"]{
+                            width: 40px;
+                            height: 30px;
+                            float: right;
+                            margin: 20px 0;
+                            background: @mainColor;
+                        }
+                    }
+                }
+                // 存放视频
+                .store_video{
+                    margin-top:10px;
+                    width: 240px;
+                    height: auto;
+                    position: relative;
+                    video{
+                        width: 240px; 
+                    }
+                    .del{
+                        cursor: pointer;
+                        z-index: 2;
+                        display: none;
+                        width: 30px;
+                        height: 30px;
+                        background: url(../../images/iconfont/delete.png) no-repeat;
+                        background-size: 25px 25px;
+                        position: absolute;
+                        top:5px;
+                        right:5px;
+                    }
+                }
+                // 用户上传图片展示
+                #photo_onload{
+                    display: none;
+                    width: 100%;
+                    margin:10px 0;
+                    min-height: 100px;
+                    // 图片数量
+                    .photo_num{
+                        margin-left: 5px;
+                        .warn_max{
+                            display: none;
+                            // display:inline-block;
+                            margin-left: 15px;
+                            width: 400px;
+                            text-indent: 30px;
+                            background: url(../../images/iconfont/error.png) no-repeat left;
+                            background-size: 30px 25px;
+                            i{
+                                width: 10px;
+                            }
+                        }
+                    }
+                    // js动态添加img
+                    .onload_photo_box{
+                        width: 80px;
+                        height: 80px;
+                        float: left;
+                        margin:5px;
+                        img{
+                            width: 80px;
+                            height: 80px;
+                        }
+                        .delete{
+                            display: none;
+                            cursor: pointer;
+                            width: 80px;
+                            height: 15px;
+                            background:#c1c1ca url(../../images/iconfont/delete.png) no-repeat center;
+                            background-size:15px 15px;
+                            opacity: 0.8;
+                            margin-top: -15px;
+                        }
+                    }
+                 }
+                //无动态  
+                .no_moments{
+                    img{
+                        display: block;
+                        margin:0 auto;
+                        width: 300px;
+                        margin-top: 120px;
+                    }
+                    span{
+                        display: block;
+                        font-size: 16px;
+                        color: #787d82;
+                        text-align: center;
+                    }
+                }
+                // 有动态
+                ul.moments_list{
+                    margin-top: 20px;
+                    height: auto;
+                    // 动态模板
+                    li{
+                        position: relative;;
+                        width: 100%;
+                        height: auto;
+                        min-height: 200px;
+                        background: #FAFAFA;
+                        padding:10px 15px;
+                        margin-bottom: 30px;
+                        // 头像/时间
+                        .profile_time_wrap{
+                            width: auto;
+                            max-width: 450px;
+                            height: 50px;
+                            line-height: 50px;
+                            // float: left;
+                            img{
+                                width: 50px;
+                                height: 50px;
+                                border-radius: 100px;
+                                margin-right: 10px;
+                                float: left;
+                            }
+                            .username_time_wrap{
+                                .username{
+                                    width: auto;
+                                    height: 25px;
+                                    line-height: 25px;
+                                    color: @mainColor;
+                                    font-size: 20px;
+                                    float: left;
+                                }
+                                .time{
+                                    line-height: 30px;
+                                    // float: left;
+                                    font-size: 14px;
+                                    color: #999;
+                                    position: absolute;
+                                    margin-left: 60px;
+                                    margin-top: 25px;
+                                }
+                            }
+                        }
+                        // 收藏/举报
+                        .collect_jb_wrap{
+                            width: 200px;
+                            height: 50px;
+                            line-height: 50px;
+                            font-size: 16px;
+                            position: absolute;
+                            margin-left: 490px;
+                            margin-top: -35px;
+                            .collect_btn{
+                                float: left;
+                                cursor: pointer;
+                                // width: 80px;
+                                text-align: center;
+                                height: 25px;
+                                line-height: 25px;
+                                text-indent: 25px;
+                                margin-right: 15px;
+                                padding-right: 10px; 
+                                border-right: 1px solid #787d82;
+                                background: url(../../images/iconfont/collect.png) no-repeat left;
+                                background-size: 20px 20px;
+                            }
+                            .tip-off{
+                                text-align: center;
+                                cursor: pointer;
+                                height: 25px;
+                                line-height: 25px;
+                                float: left;
+                            }
+                            .collect_btn:hover,.tip-off:hover{
+                                color: @text-color;
+                            }
+                            .active{
+                                background: url(../../images/iconfont/collect_yellow.png) no-repeat left;
+                                background-size: 20px 20px;
+                            }
+                        }
+                        // 正文
+                        .txt_box{
+                            width: 100%;
+                            min-height: 25px;
+                            max-height: 120px;
+                            overflow: hidden;
+                            margin-top:5px;
+                            margin-left: 5px;
+                        }
+                        // 查看全文
+                        .see_all{
+                            cursor: pointer;
+                            color: @text-color;
+                            margin-left: 5px;
+                        }
+                        // 照片展示
+                        .img_box{
+                            // display: none;
+                            width: 100%;
+                            max-height: 320px;
+                            img{
+                                display: block;
+                                width: 200px;
+                                height: 200px;
+                                float: left;
+                                margin:5px;
+                            } 
+                        }
+                        // 视频
+                        .video_box{
+                            width: 480px;
+                            height: 270px;
+                            position: relative;
+                            // 播放按钮
+                            // .star_btn{
+                            //     cursor: pointer;
+                            //     position: absolute;
+                            //     width: 60px;
+                            //     height: 60px;
+                            //     margin-left: 210px;
+                            //     margin-top: 105px;
+                            //     background:#fff url(../../images/iconfont/video_btn.png) no-repeat center;
+                            //     background-size:100%; 
+                            //     border-radius: 60px;
+                            //     opacity: 0.8;
+                            // }
+                        }
+                        .op_list{
+                            .op_item{
+                                width: 30px;
+                                height: 40px;
+                                margin-right: 20px;
+                                line-height: 40px;
+                            }
+                            .like_btn{
+                                cursor: pointer;
+                                float: left;
+                                background: url(../../images/iconfont/zan.png) no-repeat left;
+                                background-size: 28px 28px; 
+                            }
+                            .like_btn_yellow{
+                                background: url(../../images/iconfont/zan_yellow.png) no-repeat left;
+                                background-size: 30px 30px; 
+                            }
+                            .share_btn{
+                                float: left;
+                            }
+                        } 
+                    }
+                }
+            }
+            // 课程
+            .course_wrap{
+                display: none;
+                .leader_course_list{
+                    h4{
+                        img{
+                            width: 30px;
+                        }
+                    }
+                    .leader_course_model{
+                        .leader_course_item{
+                            float: left;
+                            background:#FAFAFA;
+                            opacity: 0.8;
+                            border-radius: 10px 10px 0 0;
+                            width: 290px;
+                            margin: 0 20px 30px 20px;
+                            padding-bottom:20px; 
+                            a{
+                                img{
+                                    width: 100%;
+                                    height: 150px;
+                                    border-radius: 10px 10px 0 0;
+                                }
+                                .course_name{
+                                    width: 100%;
+                                    max-height: 65px;
+                                    line-height: 30px;
+                                    overflow: hidden;
+                                    font-size: 18px;
+                                    color: @text-color;
+                                    padding: 5px 15px;
+                                }
+                            }
+                            a:hover,a:active{
+                                text-decoration: none;
+                            }
+                            .course_price_link{
+                                line-height: 30px;
+                                color: #e5224c;
+                                padding: 0 15px;
+                                .course_price{
+                                   font-size:16px;
+                                }  
+                                .course_link{
+                                    float: right;
+                                    color: #fff;
+                                    background: @mainColor;
+                                    padding: 0 5px;
+                                    border-radius: 5px;
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

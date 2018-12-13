@@ -129,7 +129,7 @@ header{
             }
         }
         li span.num{
-            visibility: hidden;
+            // visibility: hidden;
             display: inline-block;
             width: 20px;
             height: 20px;
@@ -208,19 +208,17 @@ header{
             ul li{
                 width: 100%;
                 height: 80px;
-                margin-bottom: 10px;
-                a{
-                    img{
-                        width: 80px;
-                        height: 60px;
-                    }
-                }
-                a:hover{
-                    color: @text-black;
+                margin-bottom: 10px;         
+                img{
+                    width: 80px;
+                    height: 60px;
                 }
                 .courseinfo{
                     float: right;
                     padding-right: 10px;
+                    a:hover{
+                        color: @text-black;
+                    }
                     .coursename{
                         width: 150px;
                         height: auto;
@@ -231,6 +229,11 @@ header{
                     }
                     .price{
                         color: red;
+                    }
+                    .delete{
+                        cursor: pointer;
+                        float: right;
+                        color:red;
                     }
                 }
             }
@@ -425,6 +428,36 @@ header{
 .recommend{
     width: 1230px;
     margin:0 auto;
+    .addcart{
+        z-index: 1002;
+        display: none;
+        width: 350px;
+        height: 180px;
+        background: #fff;
+        position: fixed;
+        top:50%;
+        left: 50%;
+        margin-top: -120px;
+        margin-left: -150px;
+        border-radius: 8px;
+        text-align: center;
+        padding: 15px 30px;
+        .success{
+            font-size: 20px;
+            height: 80px;
+            line-height: 80px;
+        }
+        .sure{
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 8px;
+            background: @mainColor;
+            position: absolute;
+            margin-top: 100px;
+            margin-left: -110px;
+        }
+    }
     .course{
         .title{
             text-align: center;
@@ -443,7 +476,7 @@ header{
                 float: left;
                 width: 260px;
                 height: 350px;
-                margin: 10px 23px;
+                margin: 15px 23px;
                 img{
                     width: 260px;
                     height: 160px;

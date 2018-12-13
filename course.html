@@ -5,8 +5,240 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>课程名称</title>
+    <link rel="shortcut icon" href="light_favicon@32.ico">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles//bootstrap/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="styles/css/course.css">
+    <link rel="stylesheet" href="styles/css/style.css">
+    <link rel="stylesheet" href="styles/css/comment.css">
 </head>
 <body>
-    课程详情页
+    <!-- 引入公共头部 -->
+    <iframe src="common/header.html" width="100%" height="80px" frameborder="0" scrolling="no"></iframe>
+
+    <!-- 说明:私下交易平台不负责 -->
+    <div class="warning">
+        与领学者私下交易造成的任何损失与纠纷，趣学网不承担任何责任，如若有领学者向你提出私下交易，请立即<a href="javascript:;">投诉</a>。
+        <img src="images/iconfont/close_gray.png">
+    </div>
+    <!--课程详情页开始-->
+    <div class="coursewrap cf">
+        <div class="courseDetail">
+            <!-- 课程图片或视频缩略图 -->
+            <div class="coursevideo">
+                <img src="images/ad/dance.jpg">
+                <div class="video_btn">播放视频简介</div>
+            </div>
+            <!-- 视频链接  默认隐藏 -->
+            <div class="videolink">
+                <video muted width="600" height="370" controls>
+                    <source src="images/video/when-it-rains-it-pours.mp4" type="video/mp4">
+                   抱歉，该视频暂时无法观看，请您下载最新版浏览器！
+                </video>
+            </div>
+
+            <div class="course_right">
+                <!-- 课程名称 -->
+                <div class="course_title">
+                        课程名称超级超级长！！！
+                        课程名称超级超级长！！！
+                </div>
+                <!-- 价格 -->
+                <div class="course_price">
+                    价格：<span>￥29.9</span>
+                </div>
+
+                <!-- 喜欢/加入购物车 -->
+                <div class="love_addcart">
+                    <span class="love">喜欢</span>
+                    <span class="addcart">加入购物车</span>
+                    <div class="cart_animate"></div>
+                </div>
+                <!-- 课程公告栏 -->
+                <div class="notice">
+                    课程公告栏
+                </div>
+                <div class="course_notice">
+                    <div class="star_time">开课时间：<span>2018年11月28日</span><span>~2019年1月18日</span></div>
+                    <div class="class_hour">课程时长：<span>28h</span></div>
+                    <div class="week_hour">学时安排：<span>每周2-4学时</span></div>
+                    <div class="destination">学习内容：<span>《咏春》是七朵组合的中国风舞蹈，在30天的时间里将教你跳会这首舞蹈</span></div>
+                    <!-- <div class="introduced">课程介绍：<span>课程介绍最多输入四行，课程介绍最多输入四行，课程介绍最多输入四行，课程介绍最多输入四行，课程介绍最多输入四行，课程介绍最多输入四行，课程介绍最多输入四行，课程介绍最多输入四行，课程介绍最多输入四行，课程介绍最多输入四行，课程介绍最多输入四行，课程介绍最多输入四行，课程介绍最多输入四行，课程介绍最多输入四行，课程介绍最多输入四行，</span></div> -->
+                </div>
+                <!-- 购买课程按钮 -->
+                <div class="buy cf">
+                    <div class="btn">购买课程</div>
+                    <div class="next_course">
+                        <div class="sign_up">
+                        怕错过精彩内容？ <a href="javascript:;">报名下一次开课</a>
+                        </div>
+                        <div class="sign_up_success" style="display:none">
+                            恭喜你已提前报名下一次开课，开课信息会第一时间提醒你哦~ <a href="javascript:;">取消报名</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    </div>
+    <!--课程详情页结束-->
+
+    <!-- 课程选项卡开始 -->
+    <div class="course_tab_wrap cf">
+        <div class="course_tab">
+             <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active" aria-selected="true"><a href="#courseDetail" aria-controls="courseDetail" role="tab" data-toggle="tab">课程详情</a></li>
+                <!-- <li role="presentation"><a href="#mements" aria-controls="mements" role="tab" data-toggle="tab">动态圈</a></li> -->
+                <!-- <li role="presentation"><a href="#consult" aria-controls="consult" role="tab" data-toggle="tab">售前咨询</a></li> -->
+                <li role="presentation"><a href="#evaluate" aria-controls="evaluate" role="tab" data-toggle="tab">课程评价(<span>20</span>)</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content course_tab_content">
+                <div role="tabpanel" class="tab-pane courseDetail active" id="courseDetail">
+                    <div class="course_intro_text">
+                        课程简介<br>
+                        课程运用模具、服装、图文并茂，通俗易懂。依据女生不同的身材、肤色、个性等方面讲授服装搭配的方法和技巧，提高服饰审美和穿着搭配能力。课程受众面广，实用性强，不仅让女生变得穿着得体、端庄雅致、青春靓丽，甚至改变了她们的生活态度，让她们更加沉稳自信。本课程为江西省精品在线开放课程。
+                        —— 课程团队
+                    </div>
+                    <div class="course_intro_pic">
+                        <img src="images/ad/artist-guitar-guitarist-33597.jpg" >
+                        <img src="images/ad/blonde-blur-close-up-164826.jpg" >
+                    </div>
+                </div>
+                <!-- 动态圈 -->
+                <!-- <div role="tabpanel" class="tab-pane mements" id="mements">
+                    
+                </div> -->
+                <!-- 售前咨询 -->
+                <!-- <div role="tabpanel" class="tab-pane consult" id="consult">
+                    
+                </div> -->
+                <!-- 课程评价 -->
+                <div role="tabpanel" class="tab-pane evaluate" id="evaluate">
+                    <div class="commentAll">
+                        <!--评论区域 begin-->
+                        <div class="reviewArea clearfix">
+                            <textarea class="content comment-input" placeholder="请输入你对该课程的评价或者建议&hellip;"></textarea>
+                            <a href="javascript:;" class="plBtn">评论</a>
+                        </div>
+                        <!-- 当未报名此课程的用户评论时弹出 -->
+                        <div class="no_qualify">
+                            <div class="no_qualify_text">抱歉，只有购买了该课程的用户才可以进行评论，快去报名吧！</div>
+                            <div class="btn no_qualify_btn">确定</div>
+                        </div>
+                        <!--评论区域 end-->
+                        <!--回复区域 begin-->
+                        <div class="comment-show">
+                            <div class="comment-show-con clearfix">
+                                <div class="comment-show-con-img pull-left"><img src="images/iconfont/header-img-comment_03.png" alt=""></div>
+                                <div class="comment-show-con-list pull-left clearfix">
+                                    <div class="pl-text clearfix">
+                                        <a href="#" class="comment-size-name">趣学网小虫子 : </a>
+                                        <span class="my-pl-con">&nbsp;鬼鬼很友好</span>
+                                    </div>
+                                    <div class="date-dz">
+                                        <span class="date-dz-left pull-left comment-time">2017-5-2 11:11:39</span>
+                                        <div class="date-dz-right pull-right comment-pl-block">
+                                            <a href="javascript:;" class="pull-left tip-off">举报</a>
+                                            <span class="pull-left date-dz-line">|</span>
+                                            <a href="javascript:;" class="date-dz-z pull-left"><i class="date-dz-z-click-red"></i>赞 (<i class="z-num">30</i>)</a>
+                                        </div>
+                                    </div>
+                                    <div class="hf-list-con"></div>
+                                </div>
+                                
+                            </div>
+                            <div class="comment-show-con clearfix">
+                                    <div class="comment-show-con-img pull-left"><img src="images/iconfont/header-img-comment_03.png" alt=""></div>
+                                    <div class="comment-show-con-list pull-left clearfix">
+                                        <div class="pl-text clearfix">
+                                            <a href="#" class="comment-size-name">趣学网: </a>
+                                            <span class="my-pl-con">&nbsp;o2o</span>
+                                        </div>
+                                        <div class="date-dz">
+                                            <span class="date-dz-left pull-left comment-time">2017-5-2 11:11:39</span>
+                                            <div class="date-dz-right pull-right comment-pl-block">
+                                                <a href="javascript:;" class="pull-left tip-off">举报</a>
+                                                <span class="pull-left date-dz-line">|</span>
+                                                <a href="javascript:;" class="date-dz-z pull-left"><i class="date-dz-z-click-red"></i>赞 (<i class="z-num">30</i>)</a>
+                                            </div>
+                                        </div>
+                                        <div class="hf-list-con"></div>
+                                    </div>
+                                    
+                            </div>
+                        </div>
+                        <!--回复区域 end-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="course_leader">
+            <div class="leader_visiting_card">
+                领学者简介
+            </div>
+            <div class="profile_photo cf">
+                <a href="javascript:;"><img src="images/iconfont/icons8-man-in-blue-t.png"></a>
+                <div class="name_school">
+                    <a href="javascript:;"><div class="leader_name">鬼鬼大师姐</div></a>
+                    <div class="leader_school">陕西汉中职业技术学院</div>
+                </div>
+                <div class="favorite">
+                    + 关注Ta
+                </div>
+            </div>
+            <div class="course_comment cf">
+                <ul>
+                    <li>粉丝数<span class="fan_num">98</span></li>
+                    <li><a href="javascript:;">课程数<span class="course_num">3</span></a></li>
+                    <li>学习人次<span>5980</span></li>
+                </ul>
+            </div>
+            <div class="introduction">
+                性格开朗，爱好读书，5年IT教育工作经验，现任喜科堂互联教育班级主任和课程辅,主讲.NET、JAVA、移动开发技术、项目架构设计等系列课
+                性格开朗，爱好读书，5年IT教育工作经验，现任喜科堂互联教育班级主任和课程辅,主讲.NET、JAVA、移动开发技术、项目架构设计等系列课
+            </div>
+        </div>
+    </div>
+    <!-- 课程选项卡结束 -->
+
+    <!-- 回到顶部 -->
+    <a href="javascript:;" class="backtop" title="回到顶部" id="backtop"></a>
+    
+    <!-- 弹出框背景透明 -->
+    <div id="fade" class="black_overlay"></div>
+
+    <!-- 举报框 -->
+    <div class="tip-off_wrap">
+        <div class="close"><img src="./images/iconfont/close.png"></div>
+        <!-- <div class="username">我要投诉的是“<span>{{name}}</span>”用户</div> -->
+        <span class="illustrate">为防止恶意举报，请填写以下内容：</span>
+        <div class="tip-off_cause">
+            请选择举报原因：
+            <select>
+                <option value="">言语辱骂</option>
+                <option value="">推广广告</option>
+                <option value="">违法违规</option>
+                <option value="">色情低俗</option>
+                <option value="">赌博诈骗</option>
+                <option value="">其他</option>
+            </select>
+            <span class="other-cause">其他说明:</span>
+            <textarea name="tip-off_cause" id="other-supply" cols="25" rows="3" maxlength="120" placeholder="若选择其他原因，请填写该项内容，以便平台为大家提供良好的氛围！"></textarea>
+        </div>
+        <div class="submit-btn">提交</div>
+    </div>
+
+    <!-- 引入公共底部 -->
+    <iframe src="common/footer.html" width="100%" height="85px" style="display:block;" frameborder="0"></iframe>
+
+    <script src="script/bootstrap/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="script/model/jquery.flexText.js"></script>
+    <script type="text/javascript" src="script/course.js"></script>
+    <script type="text/javascript" src="script/back_top.js"></script>
 </body>
 </html>

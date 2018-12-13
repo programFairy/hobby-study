@@ -131,7 +131,6 @@ header .header_nav li a:hover {
   color: #ffd700;
 }
 header .header_nav li span.num {
-  visibility: hidden;
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -210,16 +209,16 @@ header .shopcart .cartlist ul li {
   height: 80px;
   margin-bottom: 10px;
 }
-header .shopcart .cartlist ul li a img {
+header .shopcart .cartlist ul li img {
   width: 80px;
   height: 60px;
-}
-header .shopcart .cartlist ul li a:hover {
-  color: #424242;
 }
 header .shopcart .cartlist ul li .courseinfo {
   float: right;
   padding-right: 10px;
+}
+header .shopcart .cartlist ul li .courseinfo a:hover {
+  color: #424242;
 }
 header .shopcart .cartlist ul li .courseinfo .coursename {
   width: 150px;
@@ -230,6 +229,11 @@ header .shopcart .cartlist ul li .courseinfo .coursename {
   overflow: hidden;
 }
 header .shopcart .cartlist ul li .courseinfo .price {
+  color: red;
+}
+header .shopcart .cartlist ul li .courseinfo .delete {
+  cursor: pointer;
+  float: right;
   color: red;
 }
 header .shopcart .cartlist ul li:hover {
@@ -409,6 +413,36 @@ header .shopcart .cartlist ul li:hover {
   width: 1230px;
   margin: 0 auto;
 }
+.recommend .addcart {
+  z-index: 1002;
+  display: none;
+  width: 350px;
+  height: 180px;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -120px;
+  margin-left: -150px;
+  border-radius: 8px;
+  text-align: center;
+  padding: 15px 30px;
+}
+.recommend .addcart .success {
+  font-size: 20px;
+  height: 80px;
+  line-height: 80px;
+}
+.recommend .addcart .sure {
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 8px;
+  background: #fdd102;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: -110px;
+}
 .recommend .course .title {
   text-align: center;
   line-height: 80px;
@@ -425,7 +459,7 @@ header .shopcart .cartlist ul li:hover {
   float: left;
   width: 260px;
   height: 350px;
-  margin: 10px 23px;
+  margin: 15px 23px;
 }
 .recommend .course .courseList .courseInfo img {
   width: 260px;

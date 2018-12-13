@@ -9,7 +9,6 @@
 	<link rel="stylesheet" href="styles/bootstrap/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="styles/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="styles/css/index.css">
-	<link rel="stylesheet" type="text/css" href="styles/css/animate.css">
 </head>
 <body>
 	<!--兴趣选择弹框-->
@@ -47,7 +46,7 @@
 			<ul class="header_nav">
 				<li><a href="#"><i class="fa fa-bell-o"></i>消息通知</a></li>
 				<li><a href="#"><i class="fa fa-leanpub"></i>我的学习</a></li>
-				<li><a href="#"><i class="fa fa-shopping-cart"></i>购物车<span class="num">10</span></a></li>
+				<li><a href="#"><i class="fa fa-shopping-cart"></i>购物车</a><span class="num">0</span></li>
 				<li><a href="#"><i class="fa fa-user-plus"></i>申请成为领学者</a></li>
 				<li class="login_link"><a href="login.html">登录</a>/<a href="register.html">注册</a></li>
 				<li class="avatar"><a href="javascript:;">username <img src="images/logo/logo_light.png"></a></li>
@@ -65,40 +64,44 @@
 				<div class="cartlist">
 					<ul>
 						<li>
-							<a href="course.html">
-								<img src="images/logo/black_logo_light.png">
-								<div class="courseinfo">
-									<p class="coursename">课程名</p>
-									<span class='price'>￥ 29.9</span>
-								</div>
-							</a>
+							<img src="images/logo/black_logo_light.png">
+							<div class="courseinfo">
+								<a href="course.html"><p class="coursename">课程名</p></a>
+								<span class='price'>￥ 29.9</span>
+								<span class="delete">删除</span>
+							</div>
 						</li>
 						<li>
-							<a href="course.html">
-								<img src="images/logo/black_logo_light.png">
-								<div class="courseinfo">
-									<p class="coursename">课程名特别长，准备好了吗？我要用一个月教给你</p>
-									<span class='price'>￥ 29.9</span>
-								</div>
-							</a>
+							<img src="images/logo/black_logo_light.png">
+							<div class="courseinfo">
+								<a href="course.html"><p class="coursename">课程名</p></a>
+								<span class='price'>￥ 29.9</span>
+								<span class="delete">删除</span>
+							</div>
 						</li>
 						<li>
-							<a href="course.html">
-								<img src="images/logo/black_logo_light.png">
-								<div class="courseinfo">
-									<p class="coursename">课程名特别长，准备好了吗？我要用一个月教给你</p>
-									<span class='price'>￥ 29.9</span>
-								</div>
-							</a>
+							<img src="images/logo/black_logo_light.png">
+							<div class="courseinfo">
+								<a href="course.html"><p class="coursename">课程名</p></a>
+								<span class='price'>￥ 29.9</span>
+								<span class="delete">删除</span>
+							</div>
 						</li>
 						<li>
-							<a href="course.html">
-								<img src="images/logo/black_logo_light.png">
-								<div class="courseinfo">
-									<p class="coursename">课程名特别长，准备好了吗？我要用一个月教给你</p>
-									<span class='price'>￥ 29.9</span>
-								</div>
-							</a>
+							<img src="images/logo/black_logo_light.png">
+							<div class="courseinfo">
+								<a href="course.html"><p class="coursename">课程名</p></a>
+								<span class='price'>￥ 29.9</span>
+								<span class="delete">删除</span>
+							</div>
+						</li>
+						<li>
+							<img src="images/logo/black_logo_light.png">
+							<div class="courseinfo">
+								<a href="course.html"><p class="coursename">课程名</p></a>
+								<span class='price'>￥ 29.9</span>
+								<span class="delete">删除</span>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -133,8 +136,8 @@
 			<div class="head_link">
 				<ul>
 					<li><a href="javascript:;">推荐看点</a></li>
-					<li><a href="javascript:;">趣学吧</a></li>
-					<li><a href="javascript:;">领学圈</a></li>
+					<li><a href="javascript:;">精彩社区</a></li>
+					<li><a href="javascript:;">兴趣班</a></li>
 					<li><a href="javascript:;">王者榜单</a></li>
 					<li><a href="javascript:;">寻Ta</a></li>
 				</ul>
@@ -467,6 +470,13 @@
 
 	<!--推荐部分开始-->
 	<div class="recommend">
+		<!--加入购物车成功弹框-->
+		<div class="addcart">
+			<span class="success">
+				添加购物车成功
+			</span>
+			<button class="sure">确定</button>
+		</div>
 		<!--精选课程-->
 		<div class="course">
 			<div class="title">
@@ -963,9 +973,17 @@
 	<iframe src="common/footer.html" style="display:block;" frameborder="0" width="100%" height="85px"></iframe>
 	<!--底部信息栏结束-->
 
+	<!--弹框背景设置透明开始-->
+	<div id="fade" class="black_overlay"></div>
+	<!--弹框背景设置透明结束-->
+	
+	<!-- 回到顶部 -->
+	<a href="javascript:;" class="backtop" title="回到顶部" id="backtop"></a>
+
 	<script type="text/javascript" src="script/bootstrap/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript"  src="script/bootstrap/bootstrap.min.js"></script>
 	<script type="text/javascript"  src="script/index.js"></script>
 	<script type="text/javascript"  src="script/model/distpicker.js"></script>
+	<script type="text/javascript" src="script/back_top.js"></script>
 </body>
 </html>
