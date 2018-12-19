@@ -95,76 +95,40 @@
         }
     }
 }
-
-
 .nav_recommend_wrap{
     width: 1210px;
     margin:0 auto;
-    .category_item{
-        width: 100%;     
-        margin-bottom: 20px;
-        .nav_link_wrap{
-            padding: 10px 20px;
-            width: 220px;
-            height:330px;
-            background: @mainColor;
-            .nav_title{
-                color: #303030;
-                text-align: center;
-            }
-            .nav_detail{
-                max-height:240px;
-                overflow: hidden;
-                li{
-                    min-width:80px;
-                    height: 30px;
-                    line-height: 30px;
-                    float: left; 
-                    margin-left: 10px;
-                    a{
-                        color: #fff;
-                        font-size: 14px;
-                    }
-                    a:hover{
-                        color: @error;
-                        text-decoration: none;
-                    }
-                }
-            }
-            .nav_detail_more{
-                display: none;
-                margin-left:10px;
-                color: #fff;
-            }
-        }
-        .video_list{
-            .video_list_left{
-                width: 400px;
-                height: 330px;
-                margin-left: 15px;
-                a{ 
+    .recommend_list{
+        .video_list_item{
+            li{
+                width: 185px;
+                height: 170px;
+                float: left;
+                margin-right: 15px;
+                margin-bottom: 10px;
+                .item_link{
                     .img_wrap{
                         display: block;
                         width: 100%;
-                        height: 270px;
+                        height: 100px;
                         overflow: hidden;
                         .video_img{
                             width: 100%;
-                            height: 270px;
+                            height: 100px;
                         }
                     }
                     .video_title{
-                        display: block;
-                        font-size: 18px;
-                        color: #000;
                         margin: 5px 0;
-                        line-height: 30px;
+                        display: block;
+                        font-size: 14px;
+                        color: #000;
+                        line-height: 25px;
                         text-overflow: ellipsis;
                         overflow: hidden;
                         white-space: nowrap;
                     }
                 }
-                a:hover{
+                .item_link:hover{
                     text-decoration: none;
                     .video_img{
                         box-sizing: border-box;
@@ -176,50 +140,13 @@
                     }
                 }
             }
-            .video_list_right{
-                width: 570px;
-                height: 330px;
-                .video_list_right_item{
-                    li{
-                        width: 180px;
-                        height: 170px;
-                        float: left;
-                        margin-left: 10px;
-                        .item_link{
-                            .img_wrap{
-                                display: block;
-                                width: 100%;
-                                height: 100px;
-                                overflow: hidden;
-                                .video_img{
-                                    width: 100%;
-                                    height: 100px;
-                                }
-                            }
-                            .video_title{
-                                margin: 5px 0;
-                                display: block;
-                                font-size: 14px;
-                                color: #000;
-                                line-height: 25px;
-                                text-overflow: ellipsis;
-                                overflow: hidden;
-                                white-space: nowrap;
-                            }
-                        }
-                        .item_link:hover{
-                            text-decoration: none;
-                            .video_img{
-                                box-sizing: border-box;
-                                transform: scale(1.1);
-                                transition: .5s;;
-                            }
-                            .video_title{
-                                color: @text-color;
-                            }
-                        }
-                    }
-                }
+            li:first-of-type{
+                background: @mainColor;
+                color: #fff;
+                font-size: 24px;
+                height: 150px;
+                line-height: 150px;
+                text-align: center;
             }
         }
     }

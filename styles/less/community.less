@@ -1,0 +1,120 @@
+@import './variable.less';
+
+.common_header > .leftnav > ul > li:nth-child(2) a{
+    color: #ffd102;
+}
+.container{
+    width: 100%;
+    background: rgb(247, 247, 247);
+    margin-top:-5px;
+    padding: 10px 0;
+    .rank_wrap{
+        width: 1210px;
+        height: 40px;
+        margin: 0 auto;
+        .rank_left{
+            line-height: 40px;
+            span{
+                cursor: pointer;
+                margin:0 15px;
+                display: inline-block;
+            }
+            span.active{
+                color: @text-color;
+            }
+        }
+        .publish_btn{
+            line-height: 40px;
+            margin-right: 30px;
+            button{
+                text-indent: 30px;
+                height: 30px;
+                line-height: 30px;
+                padding:0 10px;
+                border-radius: 10px;
+                background:#ffd102 url(../../images/iconfont/onload_video.png) no-repeat 5px;
+                background-size: 25px 25px;
+                color: #fff;
+                outline: none;
+            }
+        }
+    }   
+    .works_wrap{
+        width: 1210px;
+        margin: 10px auto;
+        .works_list{
+            .work_item{
+                position: relative;
+                float: left;
+                width: 275px;
+                height: 295px;
+                background: #fff;
+                margin:5px 10px 20px 15px;
+                .work_item_img{
+                    width: 100%;
+                    height: 160px;
+                }
+                .work_item_img_hover{
+                    display: none;
+                    position: absolute;
+                    width: 100%;
+                    height: 160px;
+                    background: rgba(0,0,0,.5);
+                    top:0;
+                    left: 0;
+                    .work_item_intro{
+                        display: block;
+                        color: #fff;
+                        width: 100%;
+                        padding: 20px 15px;
+                        height: 120px;
+                        overflow: hidden;
+                    }
+                }
+                a:hover{
+                    text-decoration: none;
+                }
+                .work_item_info{
+                    display: block;
+                    width: 100%;
+                    height: 40px;
+                    line-height: 40px;
+                    padding:5px 20px;
+                    color: #333333;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-size: 16px;
+                    white-space: nowrap;
+                }
+                .work_item_info:hover{
+                    color: @text-color;                    
+                }
+                .work_item_time{
+                    display: block;
+                    color: #999999;
+                    font-size: 14px;
+                    padding: 5px 20px 10px 20px;
+                    border-bottom: 1px solid #f7f7f7;
+                }
+                .work_user{
+                    line-height: 50px;
+                    padding: 0 20px;
+                    a:hover{
+                        text-decoration: none;
+                    }
+                    .work_user_profile{
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 35px;
+                    }
+                    .user_name{
+                        margin-left: 10px;
+                        font-size: 14px;
+                        color: #999999;
+                    }
+                }
+            }
+        }
+    }
+
+}
