@@ -1,0 +1,21 @@
+.container {
+  position: relative;
+}
+.container .left_nav {
+  background: #ccc;
+  height: 300px;
+}
+.container .right_content {
+  margin: 20px auto;
+}
+.container .right_content .course_table thead tr th {
+  color: #ffd102;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0;
+  text-align: center;
+}
+.container .right_content .course_table tbody tr td {
+  vertical-align: middle;
+  font-size: 16px;
+}

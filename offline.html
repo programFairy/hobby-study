@@ -6,40 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>线下实训-趣学网学院</title>
     <link rel="shortcut icon" href="light_favicon@32.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/css/reset.css">
-    <link rel="stylesheet" href="styles/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/css/offline.css">
-    <!-- 视频背景 -->
-    <link rel="stylesheet" href="lib/css/jquery.vidbacking.css">
-    <link rel="stylesheet" href="lib/css/bgvideo.css">
+    <link rel="stylesheet" type="text/css" href="common/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/offline.css">
 </head>
 <body>
     <!-- 引入头部 -->
     <iframe src="common/header.html" width="100%" height="80px" frameborder="0" scrolling="no" style="display:block"></iframe>
     <!-- 视频背景 -->
-    <div class="jq22-container">	
-		<div class="video-back">
-	        <video poster="" autoplay muted loop class="vidbacking">
-	            <source src="http://v.tiaooo.com/tiaooo-pc-1.mp4" type="video/mp4">
-            </video>
-            <div class="jq22-demo center">
-                <h1>兴趣也可以是职业</h1>
-                <h3>我的自信来自于每一分每一秒的学习</h3>
-                <p>面对面快速提升实战技能</p>
-		    </div>
-	    </div>
+    <div class="videoBack">
+        <video poster="" autoplay muted loop class="video_wrap">
+            <source src="http://v.tiaooo.com/tiaooo-pc-1.mp4" type="video/mp4">
+        </video>
+        <div class="videoBack_text">
+            <h1>兴趣也可以是职业</h1>
+            <h3>我的自信来自于每一分每一秒的学习</h3>
+            <p>面对面快速提升实战技能</p>
+        </div>
     </div>
+
     
     <div class="location cf" data-toggle="distpicker">
         <!--定义省市区三级级联-->
         <div class="province_select lf">
-            <select class="form-control" id="eprovinceName" data-province="---- 选择省 ----" name="provinceName"></select>
+            <select class="form-control" id="eprovinceName" data-province="---- 选择省 ----" name="provinceName" ></select>
         </div>
         <div class="city_select lf">
             <select class="form-control" id="ecityName" data-city="---- 选择市 ----" name="cityName"></select>
         </div>
         <div class="district_select lf">
-            <select class="form-control" id="edistrictName" data-district="---- 选择区 ----" name="districtName"></select>
+            <select class="form-control" id="edistrictName" data-district="---- 选择区 ----" name="districtName" ></select>
         </div>
     </div>
 
@@ -134,17 +130,18 @@
     <!-- 引入底部 -->
     <iframe src="common/footer.html" style="display:block;" frameborder="0" width="100%" height="85px"></iframe>
 
-    <script src="script/bootstrap/jquery-3.2.1.min.js"></script>
-    <script src="script/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <!-- 城市选择三级联动 -->
-    <script type="text/javascript"  src="script/model/distpicker.js"></script>
-    <!-- 视频背景 -->
-    <script src="lib/js/jquery.vidbacking.js"></script>
+    <script type="text/javascript"  src="plugins/js/distpicker.min.js"></script>
 
     <script type="text/javascript">
         $(function(){
-            $('.video-back').vidbacking();
-        });
+            $('#edistrictName').change(function() {   
+                var area =  $("#edistrictName option:selected").val();
+            })
+
+        })
     </script>
 </body>
 </html>

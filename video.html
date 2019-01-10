@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{视频名}}</title>
     <link rel="shortcut icon" href="light_favicon@32.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/css/reset.css">
-    <link rel="stylesheet" href="styles/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/css/video.css">
+    <link rel="stylesheet" type="text/css" href="common/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/video.css">
      <!-- 社会化分享 -->
-     <link rel="stylesheet" href="lib/css/share.css">
+     <link rel="stylesheet" href="plugins/css/share.css">
 </head>
 <body>
     <!-- 引入头部 -->
@@ -19,7 +19,7 @@
     <!-- 视频播放/相关推荐 -->
     <section class="video_wrap cf">
         <div class="video_box lf">
-            <video src="images/video/cont-1325890-11542974-154101-hd.mp4" controls="controls"></video>
+            <video src="images/video/cont-1325890-11542974-154101-hd.mp4" controls="controls" id='video_time'></video>
             <div class="video_info">
                 <span class="video_title">视频名称</span>
                 <span class="share_btn"></span>
@@ -107,9 +107,9 @@
      <!-- 引入底部 -->
      <iframe src="common/footer.html" style="display:block;" frameborder="0" width="100%" height="85px"></iframe>
      
-     <script src="script/bootstrap/jquery-3.2.1.min.js"></script>
+     <script src="lib/jquery/jquery-3.3.1.min.js"></script>
       <!-- 社会化分享 -->
-    <script src="lib/js/share.js"></script>
+    <script src="plugins/js/share.js"></script>
      <script>
          window.onload = function(){
             //  初始分享
@@ -118,6 +118,24 @@
                 url:'',
                 titile:''
             });
+
+
+            // 获取视频时长
+            var time;
+            var pl = document.getElementById('video_time');
+            time = Math.floor(pl.duration); //视频的总秒数,取整
+            //alert(time);
+            //获取分钟
+            var minute = Math.floor(time / 60);
+            // 获取秒
+            var second = time % 60;
+            if(minute < 10) {
+                minute = '0' + minute;
+            }else if(second < 10){
+                second = '0' + second;
+            }
+            var total_time = minute + "'" + second + "''";
+            console.log(total_time);
          }
      </script>
 </body>

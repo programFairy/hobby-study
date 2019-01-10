@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>领学者管理——趣学网</title>
+    <link rel="shortcut icon" href="light_favicon@32.ico">
+    <link rel="stylesheet" type="text/css" href="common/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrapTable/css/bootstrap-table.css">
+    <link rel="stylesheet" href="css/leaderManage.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 left_nav">
+
+            </div>
+            <div class="col-md-10 right_content">
+                <table class=" table-hover course_table" id="course_table" data-toggle="table">
+                    <thead class=" text-center ">
+                        <tr>
+                            <th>序号</th>
+                            <th>课程名</th>
+                            <th>开课时间</th>
+                            <th>课程时长</th>
+                            <th>发布时间</th>
+                            <th>状态</th>
+                            <th>编辑</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr>
+                            <td>1</td>
+                            <td>{{课程名如果很长怎么办？怎么让其另起一行}}</td>
+                            <td>{{开课时间：2019/01/06-2019/02/15}}</td>
+                            <td>{{课程时长：50h}}</td>
+                            <td>{{发布时间：2019/01/02}}</td>
+                            <td>审核中/审核通过</td>
+                            <td>
+                                <button class="btn btn-danger">编辑</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 引入bootstrapTable -->
+    <script src="lib/bootstrapTable/js/bootstrap-table.js"></script>
+    <script src="lib/bootstrapTable/js/bootstrap-table-zh-CN.js"></script>
+    <script type="text/javascript">
+        
+    </script>
+</body>
+
+</html>
