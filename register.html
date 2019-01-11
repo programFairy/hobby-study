@@ -263,13 +263,13 @@
                 }
             })
 
-            $('.send-code').click(function () {
-                var email_val = $('#bind_email_num').val();
-                if (email_val == '') {
-                    $('#bind_email_num').siblings('.error').show().html(
-                        "<i class='icon-error'></i>请输入邮箱号");
-                }
-            })
+            // $('.send-code').click(function () {
+            //     var email_val = $('#bind_email_num').val();
+            //     if (email_val == '') {
+            //         $('#bind_email_num').siblings('.error').show().html(
+            //             "<i class='icon-error'></i>请输入邮箱号");
+            //     }
+            // })
 
 
             // 验证码
@@ -346,7 +346,7 @@
                 var obj = $(this);
                 var email = $('#email_number').val();
                 var psw_val = $('#email_psw').val(); //获取密码
-                var bind_email = $('#email-code').val();
+                var bind_email = $('#bind_email_num').val();
                 if((email != '' && psw_val != '' && ck_email.test(email) && ck_password.test(psw_val))
                  || (bind_email != '' && ck_email.test(bind_email))){
                     settime(obj);
