@@ -11,6 +11,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 blockquote,q {quotes: none;}
 blockquote:before,blockquote:after,q:before,q:after {content: none;}
 table {border-collapse: collapse;border-spacing: 0;}
+p{margin-bottom: 0 !important;} /*清除bootstrap默认的p后边距*/
 /**CSS Reset 结束**/
 
 /**公共样式开始**/
@@ -19,8 +20,8 @@ ol,ul,li {list-style: none;}
 input{border:none;outline: 0;}
 img {border:0;vertical-align:middle;}
 a {text-decoration: none;outline:none;color: #424242;}
-a:hover, a:active{text-decoration: none;color: #FFD700;}
-a:visited, a:link{text-decoration:none; }/*指已经访问过的链接*/
+a:hover, a:active{text-decoration: none !important;color: #FFD700;}
+a:visited, a:link{text-decoration:none !important; }/*指已经访问过的链接*/
 h1 {font-size:36px;}
 h2 {font-size:30px;}
 h3 {font-size:24px;}
@@ -33,6 +34,7 @@ h6 {font-size:12px;}
 .clearfix, .cf{*zoom:1}
 .clearfix:after, .cf:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
 .clear, .cl {clear:both;}
+textarea{resize: unset;}
 /* validator */
 label.error {
     background:url("../../images/iconfont/error.png") no-repeat left center;

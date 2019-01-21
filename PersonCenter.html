@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="common/css/reset.css">
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/personCenter.css">
-    <link rel="stylesheet" href="lib/iconmoon/personCenter/style.css">
+    <link rel="stylesheet" href="lib/iconmoon/tipIco/style.css">
 </head>
 
 <body>
@@ -66,22 +66,22 @@
                                 <li class="auth_item">
                                     <!-- 若用户已经认证则将title改为 “你已实名认证” -->
                                     <div class="ico_wrap" data-toggle="tooltip" data-placement="bottom" title="你已实名认证"><i
-                                            class="icon-user-rz active"></i></div>
+                                            class="icon-shimingrenzheng active"></i></div>
                                 </li>
                                 <li class="auth_item">
                                     <!-- 若用户已经认证则将title改为 “你已学籍认证” -->
                                     <div class="ico_wrap" data-toggle="tooltip" data-placement="bottom" title="还未学籍认证"><i
-                                            class="icon-school"></i></div>
+                                            class="icon-certificate"></i></div>
                                 </li>
                                 <li class="auth_item">
                                     <!-- 若用户已经认证则将title改为 “你已绑定手机” -->
                                     <div class="ico_wrap" data-toggle="tooltip" data-placement="bottom" title="还未绑定手机"><i
-                                            class="icon-shouji"></i></div>
+                                            class="icon-phone"></i></div>
                                 </li>
                                 <li class="auth_item">
                                     <!-- 若用户已经认证则将title改为 “你已绑定邮箱” -->
                                     <div class="ico_wrap" data-toggle="tooltip" data-placement="bottom" title="还未绑定邮箱"><i
-                                            class="icon-email"></i></div>
+                                            class="icon-youxiang"></i></div>
                                 </li>
                             </ul>
                         </div>
@@ -114,13 +114,14 @@
                                 <label for="userId" class="col-sm-2 control-label">HobbyStudyId</label>
                                 <div class="col-sm-8">
                                     <input class="form-control" id="userId" type="text" placeholder="{{user_id}}"
-                                        disabled> </div>
+                                        disabled> 
+                                </div>
                             </div>
                             <!--用户昵称  -->
                             <div class="form-group">
                                 <label for="userName" class="col-sm-2 control-label">用户昵称</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="userName" placeholder="{{随机名字}}">
+                                    <input type="text" class="form-control" id="userName">
                                 </div>
                             </div>
                             <!-- 性别 -->
@@ -200,7 +201,6 @@
 
                         <!-- 邮箱模态框 -->
 
-                        <!-- Modal -->
                         <div class="modal fade" id="EmailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -210,15 +210,22 @@
                                         <h4 class="modal-title" id="myModalLabel">绑定邮箱</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <form class="form-horizontal" id="emailForm">
+                                        <!-- 如果已绑定邮箱则显示 -->
+                                        <div class="changeEmail">
+                                            你当前已绑定邮箱<span class="bindEmail">XXXXXXXX@xx.com</span>
+                                            <button type="button" class="btn changeEmail_btn">更改</button>
+                                        </div>
+                                        <!-- 更改邮箱 -->
+                                        <form class="form-horizontal" id="emailForm" style="display:none">
                                             <div class="form-group">
                                                 <label for="email" class="col-sm-2 control-label">邮箱</label>
                                                 <div class="col-sm-10">
                                                     <input type="email" class="form-control" id="email" placeholder="请输入您的邮箱"
                                                         required>
-                                                    <div class="sendBtn" id="countdown">
+                                                    <button type="button" class="sendBtn" id="sendCode">
                                                         发送验证码
-                                                    </div>
+                                                    </button>
+                                                    <div class="error"></div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -226,6 +233,7 @@
                                                 <div class="col-sm-10">
                                                     <input type="text" class="form-control" id="emailCode" placeholder="请输入验证码"
                                                         required>
+                                                        <div class="error"></div>
                                                 </div>
                                             </div>
                                         </form>
@@ -253,7 +261,6 @@
                             </div>
                         </div>
                         <!-- 手机绑定模态框 -->
-                        <!-- Modal -->
                         <div class="modal fade" id="phoneModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -270,9 +277,10 @@
                                                 <div class="col-sm-10">
                                                     <input type="phone" class="form-control" id="phone" placeholder="请输入您的手机号"
                                                         required>
-                                                    <div class="sendBtn" id="countdown">
+                                                    <button type="button" class="sendBtn" id="sendPhoneCode">
                                                         发送验证码
-                                                    </div>
+                                                    </button>
+                                                    <div class="error"></div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -280,6 +288,7 @@
                                                 <div class="col-sm-10">
                                                     <input type="text" class="form-control" id="phoneCode" placeholder="请输入验证码"
                                                         required>
+                                                    <div class="error"></div>
                                                 </div>
                                             </div>
                                         </form>
@@ -322,6 +331,7 @@
                                                 <div class="col-sm-10">
                                                     <input type="password" class="form-control" id="formerPassword"
                                                         placeholder="输入原始密码" required>
+                                                    <div class="error"></div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -329,6 +339,7 @@
                                                 <div class="col-sm-10">
                                                     <input type="password" class="form-control" id="newPassword"
                                                         placeholder="输入新密码" required>
+                                                        <div class="error"></div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -336,6 +347,7 @@
                                                 <div class="col-sm-10">
                                                     <input type="password" class="form-control" id="confirm_newPassword"
                                                         placeholder="确认新密码" required>
+                                                    <div class="error"></div>
                                                 </div>
                                             </div>
                                         </form>
@@ -418,6 +430,7 @@
                                                 <div class="col-sm-8">
                                                     <input type="text" class="form-control" id="authenticIdCard"
                                                         placeholder="请输入您的身份证号码" maxlength="18" required>
+                                                    <div class="error"></div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -566,131 +579,8 @@
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <!-- 引入地区插件 -->
     <script src="plugins/js/distpicker.min.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            // 初始化提示标签
-            $('[data-toggle="tooltip"]').tooltip();
-
-            $('.list-group .list-group-item').click(function () {
-                $(this).addClass('active').siblings().removeClass('active');
-            })
-
-            // 鼠标滑动到头像显示更换头像的链接
-            $('.profile .profile_img').mouseenter(function () {
-                $('.update-avator').css('display', 'block');
-            })
-
-            $('.profile').mouseleave(function () {
-                $('.update-avator').css('display', 'none');
-            })
-            // 点击左边的框显示对应的右边的内容
-
-            $('.list-group .list-group-item').click(function () {
-                var anum = $(this).index();
-                $('.right_content_box .right_item').eq(anum).css('display', 'block').siblings().css(
-                    'display', 'none');
-            })
-
-            // 点击上传学籍证明
-            $('.file_box').click(function () {
-                $('#materia').click();
-            })
-
-
-            var img = document.getElementById('materia');
-            img.onchange = function () {
-                var imgName = this.files[0].name;
-                // console.log(imgName);
-                var store_img = document.getElementById('img_name');
-                store_img.innerHTML = imgName;
-            }
-
-            // 点击上传身份证触发上传文件input框的点击事件
-            $('.photo_front').click(function () {
-                $('#IdPhoto_front').click();
-            })
-            $('.photo_reverse').click(function () {
-                $('#IdPhoto_reverse').click();
-            })
-            // 点击图片可以更换图片
-            $('#front_img').click(function () {
-                $('#IdPhoto_front').click();
-            })
-            $('#reverse_img').click(function () {
-                $('#IdPhoto_reverse').click();
-            })
-
-
-            //获取上传的身份证正面
-            $("#IdPhoto_front").change(function (e) {
-                //获取目标文件
-                var file = e.target.files || e.dataTransfer.files;
-                //如果目标文件存在
-                if (file) {
-                    //定义一个文件阅读器
-                    var reader = new FileReader();
-                    //文件装载后将其显示在图片预览里
-                    reader.onload = function () {
-                        $("#front_img").attr("src", this.result);
-                    }
-                    //装载文件
-                    reader.readAsDataURL(file[0]);
-                    $('.photo_front').css('display', 'none');
-                    $('#front_img').css('display', 'block');
-                } else {
-                    $('#front_img').css('display', 'none');
-                    $('.photo_front').css('display', 'block');
-                }
-            });
-            // 获取上传的身份证反面
-            $("#IdPhoto_reverse").change(function (e) {
-                //获取目标文件
-                var file = e.target.files || e.dataTransfer.files;
-                //如果目标文件存在
-                if (file) {
-                    //定义一个文件阅读器
-                    var reader = new FileReader();
-                    //文件装载后将其显示在图片预览里
-                    reader.onload = function () {
-                        $("#reverse_img").attr("src", this.result);
-                    }
-                    //装载文件
-                    reader.readAsDataURL(file[0]);
-                    $('.photo_reverse').css('display', 'none');
-                    $('#reverse_img').css('display', 'block');
-                } else {
-                    $('#reverse_img').css('display', 'none');
-                    $('.reverse_front').css('display', 'block');
-                }
-            });
-
-            //将用户原来的头像src赋给更改头像框的img
-            var originPhoto = $('.profile_img').attr('src');
-            // console.log(originPhoto);
-            $('#changePhoto-img').attr('src', originPhoto);
-
-            // 点击上传头像
-            $('.onload_link').click(function() {
-                $('#onload_change_profile').click();
-            });
-            // 获取用户上传的头像
-            $("#onload_change_profile").change(function (e) {
-                //获取目标文件
-                var file = e.target.files || e.dataTransfer.files;
-                //如果目标文件存在
-                if (file) {
-                    //定义一个文件阅读器
-                    var reader = new FileReader();
-                    //文件装载后将其显示在图片预览里
-                    reader.onload = function () {
-                        $("#changePhoto-img").attr("src", this.result);
-                    }
-                    //装载文件
-                    reader.readAsDataURL(file[0]);
-                }
-            });
-        })
-    </script>
+   
+    <script src="js/personCenter.js"></script>
 </body>
 
 </html>

@@ -208,7 +208,7 @@ button.btn {
   width: 320px;
 }
 .container .right_content_box .account_box .right_item_body .modal .modal-body .form-horizontal .sendBtn {
-  cursor: pointer;
+  /* cursor: pointer; */
   width: 120px;
   height: 30px;
   line-height: 30px;
@@ -217,6 +217,7 @@ button.btn {
   position: absolute;
   top: 1px;
   right: 0;
+  background: #fff;
 }
 .container .authentic_wrap,
 .container .leaderManage_wrap {
@@ -305,4 +306,28 @@ button.btn {
   height: 40px;
   line-height: 40px;
   text-align: center;
+}
+/* 错误提示信息.error */
+.modal .modal-dialog .modal-content .modal-body .form-group .error{
+  color: #E5224C;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: left;
+}
+.modal .modal-dialog .modal-content .modal-body .form-group .error i{
+  padding-right:10px; 
+}
+
+/* 已绑定邮箱 */
+#EmailModal .bindEmail{
+  color: #E5224C;
+}
+#EmailModal  .changeEmail_btn{
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  border-radius: 4px;
+  background: #ffd102;
+  color: #fff;
+  margin-left: 20px;
 }
