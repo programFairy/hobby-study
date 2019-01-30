@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>待审核课程</title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="common/css/reset.css">
+    <style>
+        .container{
+                position: relative;
+                margin-top: 30px;
+            }
+        /* 设置表格文字居中 */
+        .table-title tr th{
+            font-size: 14px;
+            text-align: center !important;
+            border-color: #ddd;
+            background-color: #f9f9f9;
+        }
+        /* 设置表格垂直居中 */
+        .table>tbody>tr>td, 
+        .table>tbody>tr>th, 
+        .table>thead>tr>th, 
+        .table>thead>tr>td{
+            vertical-align: middle !important;
+        }
+            /* 分页 */
+            .pagination{
+            width: 280px;
+            position: absolute;
+            left: 50%;
+            margin-left: -140px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="content-header">
+
+        </section>
+
+        <section class="content">
+            <table class="table table-bordered"  style="text-align:center;">
+                <thead class="table-title">
+                    <tr>
+                        <th></th>
+                        <th>序号</th>
+                        <th>课程名称</th>
+                        <th>课程作者</th>
+                        <th>课程价格</th>
+                        <th>查看详情</th>
+                        <th>课程下架</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td>1</td>
+                        <td>{{课程名称限制宽度，多余换号}}</td>
+                        <td>{{课程作者}}</td>
+                        <td>￥ 19.9</td>
+                        <td><button class="btn btn-primary">查看</button></td>
+                        <td><button class="btn btn-danger">下架</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

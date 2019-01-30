@@ -1,40 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>趣学后台管理系统登录</title>
-	<link rel="stylesheet" href="styles/css/style.css">
+	<link rel="stylesheet" href="common/css/reset.css">
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	<!-- 验证码插件 -->
+	<link rel="stylesheet" href="lib/verify/css/verify.css">
+	<style>
+		#adminLogin .loginCenter {
+			width: 480px;
+			margin: 70px auto;
+		}
+
+		#adminLogin .loginCenter .logo img {
+			width: 230px;
+		}
+		#adminLogin .loginCenter .logo small{
+			font-size: 32px;
+		}
+		#loginBtn{
+			width: 100%;
+		}
+		.error{
+			color: #e5224c;
+		}
+	</style>
 </head>
+
 <body>
-	<div class="login" id="adminLogin">
-		<div class="loginMain">
-			<h1>趣学后台管理系统</h1>
-			<form action="/" method="POST">
-				<ul>
-					<li>
-						<span>管理员账号：</span>
-						<input type="text" name="adminName" autofocus>
-						<i id="name_error"></i>
-					</li>
-					<li>
-						<span>管理员密码：</span>
-						<input type="password" name="password">
-						<i id="psw_error"></i>
-					</li>
-					<li>
-						<span>验证码：</span>
-						<input type="text" name="verify">
-						<div class="verifyCode" id="verCode"></div><br>
-						<i id="verify_error" class="verify_error"></i>
-					</li>
-					<li>
-						<input type="button" name="login_btn" value="登录">
-					</li>
-				</ul>
-			</form>
-		</div>
+	<div class="container">
+		<form action="" id="adminLogin" class="form-horizontal" method="post">
+			<div class="loginCenter">
+				<div class="logo">
+					<div class="page-header">
+						<a href="#">
+							<img src="./images/logo/black_logo_light.png">
+						</a>
+						<small>后台管理系统</small>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="adminUser" class="col-sm-2 control-label">登录名</label>
+					<div class="col-sm-6">
+						<input type="text" class="form-control" id="adminUser">
+						<!-- 存放错误信息的提示框,如果后台分开验证密码和登录名则将下面这个注释取消 -->
+						<!-- <div class="error"></div> -->
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="adminPsw" class="col-sm-2 control-label">密码</label>
+					<div class="col-sm-6">
+						<input type="password" class="form-control" id="adminPsw">
+						<!-- 存放错误信息的提示框,如果后台分开验证密码和登录名则将下面这个注释取消 -->
+						<!-- <div class="error"></div> -->
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="verifyCode" class="col-sm-2 control-label">验证码</label>
+					<div class="col-sm-6">
+						<input type="text" class="form-control" id="verifyCode">
+						<!-- 存放错误信息的提示框 -->
+						<div class="error"></div>
+					</div>
+					<div class="col-sm-4" id="verifyBox">
+						<div id="mpanel2"></div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-6">
+						<button type="submit" class="btn btn-primary" id="loginBtn">登录</button>
+						<!-- 存放错误信息的提示框,如果后台一起验证密码和登录名则将下面这个注释取消 -->
+						<!-- <div class="error"></div> -->
+					</div>
+				</div>
+			</div>
+		</form>
 	</div>
-	<script type="text/javascript" src="script/bootstrap/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="script/admin_login.js"></script>
+
+
+	<script src="lib/jquery/jquery-3.3.1.min.js"></script>
+	<!-- 引入验证码 -->
+	<script src="lib/verify/js/verify.js"></script>
+	<script>
+		$(function () {
+			// 初始化验证码
+			$('#mpanel2').codeVerify({
+				type: 1,
+				width: '80px',
+				height: '34px',
+				fontSize: '18px',
+				codeLength: 4
+			});
+
+			// 判断验证码
+			$('#verifyCode').blur(function () {
+				// 获取验证码的内容
+				var code = $('.verify-code').text().toLowerCase();
+				// 获取用户输入的验证码
+				var input_code = $(this).val();
+				if (input_code == '') {
+					$(this).siblings('.error').text('请输入验证码');
+				} else if (input_code.toLowerCase() != code) {
+					$(this).siblings('.error').text('验证码错误');
+					// $(this).val('');
+				} else {
+					$(this).siblings('.error').text('验证码正确');
+				}
+			})
+			/*如果后台判断后需要给前台传递信息，
+			则将上面的.error注释取消，
+			然后通过js给对应的信息添加text('错误信息')*/
+		})
+	</script>
 </body>
+
 </html>
