@@ -12,27 +12,15 @@
     <link rel="stylesheet" href="lib/iconmoon/adminVerify/style.css">
     <style>
         .container{
-            position: relative;
-            margin-top: 30px;
-        }
-        .content-header{
-            width: 100%;
-            height: 60px;
-        }
-        /* 清除bootstrap默认的左边距 */
-        .col-sm-4{
-            padding-left:0 !important; 
-        }
+                position: relative;
+                margin-top: 30px;
+            }
         /* 设置表格文字居中 */
         .table-title tr th{
             font-size: 14px;
             text-align: center !important;
             border-color: #ddd;
             background-color: #f9f9f9;
-        }
-         /* 全选 */
-         .table-title tr th span{
-            padding-left:10px; 
         }
         /* 设置表格垂直居中 */
         .table>tbody>tr>td, 
@@ -41,33 +29,41 @@
         .table>thead>tr>td{
             vertical-align: middle !important;
         }
-         /* 限制课程名称的宽度，超过换行 */
-         tbody tr td:nth-child(3){
-            width: 220px;
-            text-align: justify;
+        /* 调整搜素栏的边距 */
+        .content-header{
+            width: 100%;
+            height: 60px;
         }
-        /* 限制作者的宽度 */
-        tbody tr td:nth-child(4){
-            width: 125px;
+        /* 清除bootstrap默认的左边距 */
+        .col-sm-4{
+            padding-left:0 !important; 
         }
-         /* 课程价格 */
-         tbody tr td:nth-child(5){
-            width: 80px;
-        }
-        /* 调整按钮间距 */
-        tbody tr td:last-child button:first-child{
-            margin-right: 10px;
-        }
-         /* 分页 */
-         .pagination{
+        /* 分页 */
+        .pagination{
             width: 280px;
             position: absolute;
             left: 50%;
             margin-left: -140px;
         }
-        /* 设置字体图标的大小 */
-        tbody tr td:last-child i{
+         /* 设置字体图标的大小 */
+         tbody tr td:last-child i{
             font-size: 60px;
+        }
+          /* 调整按钮间距 */
+          tbody tr td:last-child button:first-child{
+            margin-right: 10px;
+        }
+        /* 限制院校名称和用户ID的宽度 */
+        tbody tr td:nth-child(2),
+        tbody tr td:nth-child(4){
+            max-width: 150px; 
+        }
+        tbody tr td:nth-child(5){
+            max-width: 95px;
+        }
+        /* 设置学籍证明的图片大小 */
+        #certificationPic{
+            width: 100%;
         }
     </style>
 </head>
@@ -77,8 +73,8 @@
         <!-- 路径导航 -->
         <ol class="breadcrumb">
             <li><a href="./main.html">首页</a></li>
-            <li><a href="#">课程管理</a></li>
-            <li class="active">待审核课程</li>
+            <li><a href="#">用户管理</a></li>
+            <li class="active">领学者申请</li>
         </ol>
         <!-- /路径导航 -->
         <section class="content-header">
@@ -94,14 +90,11 @@
             </form>
             <!-- 按钮组 -->
             <div class="btn-group rt" role="group">
-                <button type="button" class="btn btn-default" title="按最新时间排序">
-                    <i class="glyphicon glyphicon-time"></i>
-                </button>
-                <button type="button" class="btn btn-default" title="未通过课程">
-                    <i class="glyphicon glyphicon-floppy-remove"></i>
-                </button>
-                <button type="button" class="btn btn-default" title="已通过课程">
+                <button type="button" class="btn btn-default" title="审核通过">
                     <i class="glyphicon glyphicon-floppy-saved"></i>
+                </button>
+                <button type="button" class="btn btn-default" title="审核未通过">
+                    <i class="glyphicon glyphicon-floppy-remove"></i>
                 </button>
             </div>
         </section>
@@ -110,27 +103,23 @@
             <table class="table table-bordered" style="text-align:center;">
                 <thead class="table-title">
                     <tr>
-                        <th><input type="checkbox" id="selectAll"><span>全选</span></th>
                         <th>序号</th>
-                        <th>课程名称</th>
-                        <th>课程作者</th>
-                        <th>课程价格</th>
-                        <th>提交时间</th>
-                        <th>课程详情</th>
+                        <th>用户ID</th>
+                        <th>真实姓名</th>
+                        <th>所在地区</th>
+                        <th>院校名称</th>
+                        <th>能力证明</th>
                         <th>审核状态</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>
-                            <input type="checkbox">
-                        </td>
                         <td>1</td>
-                        <td>{{课程名称限制宽度，多余换号}}</td>
-                        <td>{{课程作者}}</td>
-                        <td>￥ 219.9</td>
-                        <td>2019-1-30 18:53</td>
-                        <td><button class="btn btn-primary">查看</button></td>
+                        <td>{{用户ID}}</td>
+                        <td>{{真实姓名}}</td>
+                        <td>陕西省-西安市-阎良区</td>
+                        <td>XXXX大学</td>
+                        <td><button class="btn btn-primary" data-toggle="modal" data-target="#myModal">查看</button></td>
                         <td>
                             <button class="btn btn-success verify-success">通过</button>
                             <button class="btn btn-danger verify-fail">未通过</button>
@@ -138,6 +127,40 @@
                     </tr>
                 </tbody>
             </table>
+            <!-- 查看模态框 -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">{{用户ID}}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-sm-offset-2 col-sm-2 control-label">用户ID</label>
+                                    <div class="col-sm-6">
+                                        <p id="userId" class="form-control-static">{{用户ID}}</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-offset-2 col-sm-2 control-label">真实姓名</label>
+                                    <div class="col-sm-6">
+                                        <p id="realname" class="form-control-static">真实姓名</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-offset-2 col-sm-2 control-label">学籍证明</label>
+                                    <div class="col-sm-6">
+                                       <img src="./images/logo/black_logo_light.png" id="certificationPic">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- 分页 -->
             <nav aria-label="Page navigation">
@@ -165,6 +188,8 @@
     </div>
 
     <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
     <script>
         $(function () {
             // 点击按钮通过或未通过显示对应的审核状态
@@ -173,11 +198,6 @@
             })
             $('.verify-fail').click(function () {
                 $(this).parent().html('<i class="icon-verify-fail2"></i>').css('color', 'red');
-            })
-
-             // 全选
-             $('#selectAll').click(function () {
-                $("tbody input:checkbox").prop("checked", $(this).prop('checked'));
             })
         })
     </script>
