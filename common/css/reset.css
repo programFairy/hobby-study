@@ -59,6 +59,25 @@ label.valid {
 	left: 310px;
 	top: 0px;
   }
+  /* 需要强调的改为字体红色 */
+  .highlight {
+	color: #EE3B3B;
+}
+/* 使用主题颜色 */
+.main_color{
+	color: #fff;
+	background: #FFD700;
+}
+/* 修改默认按钮的边框颜色 */
+.btn-default{
+    border-color: #ffd102;
+    color: #ffd102;
+}
+.btn-default:hover{
+    border-color: #ffd102;
+    color: #ffd102;
+    background: none;
+}
 /**公共样式开结束**/
 
 /*回到顶部*/

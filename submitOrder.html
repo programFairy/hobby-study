@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>确认订单_趣学网</title>
+    <link rel="shortcut icon" href="light_favicon@32.ico" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/css/reset.css">
+    <link rel="stylesheet" href="css/submitOrder.css">
+</head>
+
+<body>
+    <!-- 引入头部 -->
+    <iframe src="common/header.html" width="100%" height="80px" frameborder="0" scrolling="no" style="display:block"></iframe>
+
+    <div class="content_wrapper">
+        <div class="content_header">
+            <div class="page-header">
+                <h3>确认订单</h3>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="goods_lists_wrapper">
+                <div class="content_title">
+                    <h4>商品信息</h4>
+                </div>
+                <!-- 数据从此处循还 -->
+                <div class="good_item cf">
+                    <a href="course.html" class="coursePic lf"><img src="./images/bg/bg_3d.png"></a>
+                    <div class="courseInfo lf">
+                        <div class="courseName"><a href="course.html">{{课程名字}}</a></div>
+                        <div class="school">{{领学者所在学校}}</div>
+                        <div class="leaderName"><a href="leader.html">{{领学者姓名}}</a></div>
+                    </div>
+                    <div class="coursePrice rt">￥<span class="p_num">88.00</span></div>
+                </div>
+                <div class="good_item cf">
+                    <a href="course.html" class="coursePic lf"><img src="./images/bg/bg_3d.png"></a>
+                    <div class="courseInfo lf">
+                        <div class="courseName"><a href="course.html">{{课程名字}}</a></div>
+                        <div class="school">{{领学者所在学校}}</div>
+                        <div class="leaderName"><a href="leader.html">{{领学者姓名}}</a></div>
+                    </div>
+                    <div class="coursePrice rt">￥<span class="p_num">12.00</span></div>
+                </div>
+                <div class="good_item cf">
+                    <a href="course.html" class="coursePic lf"><img src="./images/bg/bg_3d.png"></a>
+                    <div class="courseInfo lf">
+                        <div class="courseName"><a href="course.html">{{课程名字}}</a></div>
+                        <div class="school">{{领学者所在学校}}</div>
+                        <div class="leaderName"><a href="leader.html">{{领学者姓名}}</a></div>
+                    </div>
+                    <div class="coursePrice rt">￥<span class="p_num">50.00</span></div>
+                </div>
+                <!-- /数据从此处循还 -->
+
+                <!-- 商品总计 -->
+                <div class="total_goods">
+                    <div class="item_group_wrapper cf">
+                        <div class="item_group rt">
+                            <label class="title lf">共计<span class="total_num"></span>件商品，商品总额为：</label>
+                            <span class="price lf">￥<i class="total_price">0.00</i></span>
+                        </div>
+                    </div>
+
+                    <div class="item_group_wrapper cf">
+                        <div class="item_group rt">
+                            <label class="title line_title lf">应付：</label>
+                            <span class="price red_price lf">￥<i class="total_price">0.00</i></span>
+                        </div>
+                    </div>
+
+                    <div class="item_group_wrapper cf">
+                        <div class="item_group rt">
+                            <label class="title lf">购买账号：</label>
+                            <span class="username lf">{{用户名}}</span>
+                        </div>
+                    </div>
+
+                    <div class="item_group_wrapper cf">
+                        <div class="item_group rt">
+                            <form action="">
+                                <button type="submit" class="btn btn-danger" id="confirm_order">提交订单</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 引入底部 -->
+    <iframe src="common/footer.html" style="display:block;" frameborder="0" width="100%" height="85px"></iframe>
+
+    <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            // 计算当前商品的数量
+            var goods_num = $('.goods_lists_wrapper .good_item ').length;
+            $('.total_num').text(goods_num);
+
+            // 商品总价
+            TotalPrice();
+            function TotalPrice() {
+                var sum = 0;
+                $(".goods_lists_wrapper .good_item").each(function () {
+                    var p_goods = $(this).children('.coursePrice').children('.p_num').text();
+                    sum += parseFloat(p_goods);
+                })
+                $('.item_group .price').children('.total_price').text(sum.toFixed(2));
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>

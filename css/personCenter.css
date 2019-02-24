@@ -350,8 +350,7 @@ button.btn {
   color: #000;
 }
 
-/* 编辑按钮边距 */
+/* 个人信息编辑按钮边距 */
 .edit{
-  display: none;
   margin-left: 30px;
 }

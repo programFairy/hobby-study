@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的订单-趣学网</title>
+    <link rel="shortcut icon" href="light_favicon@32.ico" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/css/reset.css">
+    <link rel="stylesheet" href="css/myOrder.css">
+</head>
+
+<body>
+    <!-- 引入头部 -->
+    <iframe src="common/header.html" frameborder="0" width="100%" height="85px" scrolling="no"></iframe>
+
+    <div class="container">
+        <!-- 左侧导航 -->
+        <div class="left_menu">
+            <ul>
+                <li class="menu_title">
+                    订单中心
+                </li>
+                <li class="menu_item active">
+                    <a href="javascript:;" class="order">我的订单</a>
+                    <i class="glyphicon glyphicon-play"></i>
+                </li>
+                <li class="menu_item">
+                    <a href="javascript:;" class="pocket">我的余额</a>
+                    <i class="glyphicon glyphicon-play"></i>
+                </li>
+            </ul>
+        </div>
+        <div class="right_content">
+            <!-- 我的订单 -->
+            <div class="myOrder_wrapper" id="Order">
+                <div class="myOrder_header cf">
+                    <span class="title lf">我的订单</span>
+                    <ul class="nav nav-pills lf">
+                        <li role="presentation" class="active"><a href="#">全部</a></li>
+                        <li role="presentation"><a href="#">未支付</a></li>
+                        <li role="presentation"><a href="#">已完成</a></li>
+                        <li role="presentation"><a href="#">已失效</a></li>
+                    </ul>
+                </div>
+                <!-- 当没有订单时 -->
+                <div class="order_nocontent" style="display:block">
+                    <h4>订单空空如也</h4>
+                </div>
+                <!-- 有订单显示订单列表 -->
+                <div class="myOrder_body" style="display:block">
+                    <div class="order_item">
+                        <!-- 订单编号 -->
+                        <div class="order_header">
+                            <i class="glyphicon glyphicon-list-alt"></i>
+                            <span class="ordernum_text">订单编号：<b class="order_num">19020300001</b></span>
+                            <span class="order_date">2019-02-03 19:35</span>
+                        </div>
+                        <div class="order_body">
+                            <div class="order_detail cf">
+                                <div class="course_pic lf">
+                                    <a href="course.html"><img src="images/login/bg.jpg"></a>
+                                </div>
+                                <div class="course_detail lf">
+                                    <a class="courseName">{{购买的课程名称}}</a>
+                                    <p class="price">￥<i class="price_num">99</i></p>
+                                </div>
+                                <div class="course_price lf">￥<span class="price_num">99</span></div>
+                                <!-- 订单状态：已支付/未支付/已过期 -->
+                                <div class="order_status lf">未支付</div>
+                            </div>
+                            <div class="order_detail cf">
+                                <div class="course_pic lf">
+                                    <a href="course.html"><img src="images/login/bg.jpg"></a>
+                                </div>
+                                <div class="course_detail lf">
+                                    <a class="courseName">{{购买的课程名称}}</a>
+                                    <p class="price">￥<i class="price_num">99</i></p>
+                                </div>
+                                <div class="course_price lf">￥<span class="price_num">99</span></div>
+                                <!-- 订单状态：已支付/未支付/已过期 -->
+                                <div class="order_status lf">未支付</div>
+                            </div>
+                        </div>
+                        <div class="order_footer cf">
+                            <div class="total_price rt">
+                                <span>合计：</span>
+                                <span class="price_red">￥<i></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order_item">
+                        <!-- 订单编号 -->
+                        <div class="order_header">
+                            <i class="glyphicon glyphicon-list-alt"></i>
+                            <span class="ordernum_text">订单编号：<b class="order_num">19020300001</b></span>
+                            <span class="order_date">2019-02-03 19:35</span>
+                        </div>
+                        <div class="order_body">
+                            <div class="order_detail cf">
+                                <div class="course_pic lf">
+                                    <a href="course.html"><img src="images/login/bg.jpg"></a>
+                                </div>
+                                <div class="course_detail lf">
+                                    <a class="courseName">{{购买的课程名称}}</a>
+                                    <p class="price">￥<i class="price_num">99</i></p>
+                                </div>
+                                <div class="course_price lf">￥<span class="price_num">1</span></div>
+                                <!-- 订单状态：已支付/未支付/已过期 -->
+                                <div class="order_status lf">未支付</div>
+                            </div>
+                            <div class="order_detail cf">
+                                <div class="course_pic lf">
+                                    <a href="course.html"><img src="images/login/bg.jpg"></a>
+                                </div>
+                                <div class="course_detail lf">
+                                    <a class="courseName">{{购买的课程名称}}</a>
+                                    <p class="price">￥<i class="price_num">99</i></p>
+                                </div>
+                                <div class="course_price lf">￥<span class="price_num">99</span></div>
+                                <!-- 订单状态：已支付/未支付/已过期 -->
+                                <div class="order_status lf">未支付</div>
+                            </div>
+                        </div>
+                        <div class="order_footer cf">
+                            <div class="total_price rt">
+                                <span>合计：</span>
+                                <span class="price_red">￥<i></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /我的订单 -->
+
+            <!-- 我的余额 -->
+            <div class="myPocket" id="pocket" style="display:none">
+                <div class="myPocket_header">
+                    我的余额
+                </div>
+                <div class="mypocket_body">
+                    <div class="balance cf">
+                        <div class="cur_balance lf">
+                            <p>当前余额：</p>
+                            <p class="price_num">￥<span>0.00</span></p>
+                        </div>
+                        <div class="recharge rt">
+                            <button class="btn">立即充值</button>
+                            <p>充值余额不可提现，仅限用于本平台课程消费</p>
+                        </div>
+                    </div>
+                    <div class="mypocket_note">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                        <h4>目前暂无任何收支记录</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            // 点击左侧导航切换样式
+            $('.menu_item').click(function () {
+                $(this).addClass('active').siblings().removeClass('active');
+            })
+
+            // 点击我的订单上面全部/未支付切换样式
+            $('.nav li').click(function () {
+                $(this).addClass('active').siblings().removeClass('active');
+            })
+
+            // 点击左侧导航显示对应的内容
+            $('.left_menu .menu_item .order').click(function() {
+                $('.myOrder_wrapper').css('display','block');
+                $('.myPocket').css('display','none');
+            })
+
+            $('.left_menu .menu_item .pocket').click(function() {
+                $('.myOrder_wrapper').css('display','none');
+                $('.myPocket').css('display','block');
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>领学者申请入驻</title>
+    <link rel="shortcut icon" href="light_favicon@32.ico">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/css/reset.css">
+    <link rel="stylesheet" href="css/leaderApply.css">
+</head>
+
+<body>
+    <!-- 引入头部 -->
+    <iframe src="common/header.html" width="100%" height="80px" frameborder="0" scrolling="no" style="display:block"></iframe>
+
+    <div class="title">
+        <h4>领学者入驻申请</h4>
+        <!-- <a href="javascript:;"><i class="glyphicon glyphicon-info-sign"></i>申请入驻教程</a> -->
+    </div>
+    <div class="container">
+        <div class="content-header">
+            <p class="highlight"><i class="glyphicon glyphicon-info-sign"></i>注意：入驻信息需在5日之内提交，超过时间所有信息将不做草稿保留，需全部重新填写。</p>
+            <div class="step-title">
+                <ul class="step-list cf">
+                    <li class="step-item active"><a href="javascript:;">1.填写基本信息</a></li>
+                    <li class="step-item"><a href="javascript:;">2.填写身份资质</a></li>
+                    <li class="step-item"><a href="javascript:;">3.填写能力信息</a></li>
+                    <li class="step-item"><a href="javascript:;">4.确认提交</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-body">
+            <!-- 1.填写基本信息 -->
+            <form class="form-horizontal" id="step1">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">
+                        <h4>联系信息</h4>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"><i class="highlight">*</i>联系人姓名</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="phoneName" required>
+                    </div>
+                    <p class="highlight">请填写身份证上的真实姓名，实名认证需上传身份证照片</p>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"><i class="highlight">*</i>手机号码</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="phone_number" required>
+                    </div>
+                    <p class="highlight">请填写常用的手机号，将接受管理类重要验证信息</p>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-4 cf">
+                        <input type="text" class="form-control lf" id="verify_code" placeholder="请输入验证码" style="width: 160px;margin-right: 30px;">
+                        <button class="btn btn-default lf" id="sendVerify">发送验证码</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"><i class="highlight">*</i>联系邮箱</label>
+                    <div class="col-sm-4">
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <p class="highlight">强烈建议使用个人常用邮箱，该邮箱将接收重要通知</p>
+                </div>
+                <!--经营信息  -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">
+                        <h4 class="top-line">经营信息</h4>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"><i class="highlight">*</i>经营名</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="leaderName" maxlength="12" required>
+                        <p>如：XX院爵士舞达人（可与学校学院等结合）</p>
+                    </div>
+                    <p class="highlight">在趣学网上用于展示和传播的名称（12字以内）</p>
+                </div>
+                <!-- <div class="form-group">
+                    <label class="col-sm-2 control-label"><i class="highlight">*</i>一句话介绍</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="one_introduction" required maxlength="40">
+                        <p>如：趣学网，培养兴趣的好搭档；线上线下互助学习</p>
+                    </div>
+                    <p class="highlight">精炼的介绍自己课堂的优势，方便用户获得直观印象，40字内</p>
+                </div> -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"><i class="highlight">*</i>主营类目</label>
+                    <div class="col-sm-4">
+                        <select name="category" id="category" class="form-control">
+                            <option style="display:none" selected="selected">请选择</option>
+                            <!-- 从下面开始循环数据 -->
+                            <option value="1">舞蹈</option>
+                        </select>
+                        <p>若选项中无属于你的主营类目，可填写下面的输入框</p>
+                    </div>
+                    <p class="highlight">选择适合自己的主营类目有助于快速通过审核</p>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-4 cf">
+                        <input type="text" class="form-control lf" id="other_category" placeholder="请输入主营类目关键词，如日语">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="button" class="btn main_color step_one">保存并下一步</button>
+                    </div>
+                </div>
+            </form>
+            <!--/填写基本信息 -->
+
+            <!-- 填写身份资质  -->
+            <form class="form-horizontal" id="step2" style="display:none">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">
+                        <h4>实名认证</h4>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"><i class="highlight">*</i>认证人姓名</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="realName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"><i class="highlight">*</i>身份证号码</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="id_number" required>
+                    </div>
+                    <p class="highlight">请填写中华人民共和国身份证号码（需在有效期内）</p>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"><i class="highlight">*</i>身份证正面</label>
+                    <div class="col-sm-3">
+                        <input type="file" class="form-control" id="id_front" required>
+                        <div class="opload_id">
+                            点击上传图片
+                        </div>
+                        <img src="" class="front_img" style="display:none">
+                    </div>
+                    <p class="highlight">请保证身份证姓名，身份证号码清晰可见；<br />支持jpg，png格式的图片</p>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"><i class="highlight">*</i>身份证背面</label>
+                    <div class="col-sm-3">
+                        <input type="file" class="form-control" id="id_reverse" required>
+                        <div class="opload_id">
+                            点击上传图片
+                        </div>
+                        <img src="" class="reverse_img" style="display:none">
+                    </div>
+                    <p class="highlight">请保证身份证在有效期内，且有效期清晰可见<br />支持jpg，png格式的图片</p>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn main_color step_two">保存并下一步</button>
+                        <button type="button" class="btn btn-default tostep1" style="margin-left:20px">上一步</button>
+                    </div>
+                </div>
+            </form>
+            <!-- /填写身份资质 -->
+
+            <!--填写能力信息  -->
+            <form class="form-horizontal" id="step3" style="display:none">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">
+                        <h4>能力说明</h4>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"><i class="highlight">*</i>课程教学大纲</label>
+                    <p class="highlight">上传计划开的课程教学大纲，支持docx，pdf格式</p>
+                    <div class="col-sm-offset-2  col-sm-1">
+                        <input type="file" class="form-control" id="course_schedule" required>
+                        <button type="button" class="btn main_color upload_file">上传</button>
+                    </div>
+                    <p class="file_name"></p>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">课程内容</label>
+                    <p class="highlight">通过幻灯片、视频等方式展示您计划开设课程的内容，证明您拥有内容资源创作能力</p>
+                    <div class="col-sm-offset-2  col-sm-6">
+                        <input type="url" class="form-control" id="url_link" placeholder="输入网址链接">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"><i class="highlight">*</i>个人学历认证</label>
+                    <p class="highlight">上传学历证书，如学生证、校园卡等；支持JPG等图片格式</p>
+                    <div class="col-sm-offset-2  col-sm-1">
+                        <input type="file" class="form-control" id="certificate" required>
+                        <button type="button" class="btn main_color upload_file">上传</button>
+                    </div>
+                    <p class="file_name"></p>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">个人能力认证</label>
+                    <p class="highlight">上传与开始课程相关的资格证书或者获奖证书，如英语八级等；有助于快速通过审核</p>
+                    <div class="col-sm-offset-2  col-sm-1">
+                        <input type="file" class="form-control" id="certificate">
+                        <button type="button" class="btn main_color upload_file">上传</button>
+                    </div>
+                    <p class="file_name"></p>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">微信</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="wechat" placeholder="输入微信公众号">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">微博</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="weibo" placeholder="复制主页链接">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn main_color step_three" data-toggle="modal" data-target="#myModal">保存并下一步</button>
+                        <button type="button" class="btn btn-primary tostep2" style="margin-left:20px">上一步</button>
+                    </div>
+                </div>
+            </form>
+            <!-- /填写能力信息 -->
+
+            <!-- 确认提交表单 -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">提交表单</h4>
+                        </div>
+                        <div class="modal-body">
+                                <p>请确认信息填写完整后提交表单</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default final_cancel" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary final_confirm">确认</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /确认提交表单 -->
+
+            <!-- 如果表单提交成功显示 -->
+            <div class="apply_success" style="display:none">
+                <img src="./images/tipIco/min_light.jpg">
+                <h4>您的表单已成功提交，请耐心等待3-7个工作日后给予反馈</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入底部 -->
+    <iframe src="common/footer.html" style="display:block;" frameborder="0" width="100%" height="85px"></iframe>
+
+    <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            //  点击下一步到第二步
+            $('.step_one').click(function () {
+                $('#step1').css('display', 'none');
+                $('#step2').css('display', 'block');
+                $('#step3').css('display', 'none');
+                $('.step-list .step-item:nth-child(2)').addClass('active').siblings().removeClass(
+                    'active');
+            })
+            // 点击第二步到第三步
+            $('.step_two').click(function () {
+                $('#step1').css('display', 'none');
+                $('#step2').css('display', 'none');
+                $('#step3').css('display', 'block');
+                $('.step-list .step-item:nth-child(3)').addClass('active').siblings().removeClass(
+                    'active');
+            })
+            // 上一步：第二步到第一步
+            $('.tostep1').click(function () {
+                $('#step1').css('display', 'block');
+                $('#step2').css('display', 'none');
+                $('#step3').css('display', 'none');
+                $('.step-list .step-item:first-child').addClass('active').siblings().removeClass(
+                    'active');
+            })
+            // 上一步：第三步到第二步
+            $('.tostep2').click(function () {
+                $('#step1').css('display', 'none');
+                $('#step2').css('display', 'block');
+                $('#step3').css('display', 'none');
+                $('.step-list .step-item:nth-child(2)').addClass('active').siblings().removeClass(
+                    'active');
+            })
+            // 点击第三步到第四步
+            $('.step_three').click(function () {
+                $('#step1').css('display', 'none');
+                $('#step2').css('display', 'none');
+                $('#step3').css('display', 'none');
+                $('.step-list .step-item:last-child').addClass('active').siblings().removeClass(
+                    'active');
+            })
+
+            // 点击取消则跳会第三步
+            $('.final_cancel').click(function() {
+                $('#step1').css('display', 'none');
+                $('#step2').css('display', 'none');
+                $('#step3').css('display', 'block');
+                $('.step-list .step-item:nth-child(3)').addClass('active').siblings().removeClass(
+                    'active');
+            })
+
+            // 点击确认则显示表单提交成功
+            $('.final_confirm').click(function() {
+                // 让模态框隐藏
+                $('#myModal').modal('hide');
+                $('.apply_success').css('display','block');
+            })
+            // 点击能力说明的上传触发点击事件
+            $('.upload_file').click(function () {
+                $(this).siblings('input[type="file"]').click();
+            })
+            // 显示上传文件的文件名
+            $('input[type="file"]').change(function () {
+                var filename = this.files[0].name;
+                $(this).parent().siblings('.file_name').text(filename);
+            })
+            //获取上传的身份证正面
+            $("#id_front").change(function (e) {
+                //获取目标文件
+                var file = e.target.files || e.dataTransfer.files;
+                //如果目标文件存在
+                if (file) {
+                    //定义一个文件阅读器
+                    var reader = new FileReader();
+                    //文件装载后将其显示在图片预览里
+                    reader.onload = function () {
+                        $(".front_img").attr("src", this.result);
+                    }
+                    //装载文件
+                    reader.readAsDataURL(file[0]);
+                    $(this).siblings('.opload_id').css('display', 'none');
+                    $('.front_img').css('display', 'block');
+                } else {
+                    $(this).siblings('.opload_id').css('display', 'block');
+                    $('.front_img').css('display', 'none');
+                }
+            });
+            // 获取上传的身份证反面
+            $("#id_reverse").change(function (e) {
+                //获取目标文件
+                var file = e.target.files || e.dataTransfer.files;
+                //如果目标文件存在
+                if (file) {
+                    //定义一个文件阅读器
+                    var reader = new FileReader();
+                    //文件装载后将其显示在图片预览里
+                    reader.onload = function () {
+                        $(".reverse_img").attr("src", this.result);
+                    }
+                    //装载文件
+                    reader.readAsDataURL(file[0]);
+                    $(this).siblings('.opload_id').css('display', 'none');
+                    $('.reverse_img').css('display', 'block');
+                } else {
+                    $(this).siblings('.opload_id').css('display', 'block');
+                    $('#reverse_img').css('display', 'none');
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

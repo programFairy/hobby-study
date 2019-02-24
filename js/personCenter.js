@@ -296,6 +296,10 @@ $(function () {
     })
 
     // 个人信息按钮
+    // 默认全部不可编辑
+    $('#infoFrom input').attr('disabled','disable'); 
+    $('#infoFrom select').attr('disabled','disable'); 
+    $('#infoFrom textarea').attr('disabled','disable'); 
     $('#infoFrom .saveInfo').click(function() {
         $(this).addClass('disabled'); //将该按钮变为灰色
         $(this).attr('disabled','disable'); //该按钮鼠标改为不可点击状态

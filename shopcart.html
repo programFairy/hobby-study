@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车_趣学网</title>
+    <link rel="shortcut icon" href="light_favicon@32.ico" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/css/reset.css">
+    <link rel="stylesheet" href="css/shopcart.css">
+</head>
+
+<body>
+    <!-- 引入头部 -->
+    <iframe src="common/header.html" width="100%" height="80px" frameborder="0" scrolling="no" style="display:block"></iframe>
+
+    <div class="content_wrapper">
+        <div class="content_header">
+            <div class="page-header cf">
+                <h3 class="lf">我的购物车<small>共<i class="total"></i>门，已选择<i class="select_num">0</i>门</small></h3>
+                <a href="javascript:;" class="history_order rt">我的历史订单</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="cart_lists_wrapper">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="item-checkbox"><input type="checkbox" id="selectAll">全选</th>
+                            <th class="item-course">课程</th>
+                            <th class="item-price">金额</th>
+                            <th class="item-delete">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="cart-item">
+                            <td class="item-checkbox"><input type="checkbox"></td>
+                            <td class="item-course cf">
+                                <a href="course.html" class="coursePic lf"><img src="./images/logo/black_logo_light.png"></a>
+                                <div class="course_detail lf">
+                                    <p class="courseName"><a href="course.html">{{课程名字1}}</a></p>
+                                    <p class="school">{{所在学校}}</p>
+                                    <p class="tip"><i class="glyphicon glyphicon-info-sign"></i>请根据个人情况选择本校或者距离您较近的学校所售课程，否则无法提供线下学习！</p>
+                                    <p class="leader"><a href="leader.html">领学者姓名</a></p>
+                                </div>
+                            </td>
+                            <td class="item-price">￥<span class="goods-price">50.22</span></td>
+                            <td class="item-delete"><i class="glyphicon glyphicon-remove"></i></td>
+                        </tr>
+                        <tr class="cart-item">
+                            <td class="item-checkbox"><input type="checkbox"></td>
+                            <td class="item-course cf">
+                                <a href="course.html" class="coursePic lf"><img src="./images/logo/black_logo_light.png"></a>
+                                <div class="course_detail lf">
+                                    <p class="courseName"><a href="course.html">{{课程名字2}}</a></p>
+                                    <p class="school">{{所在学校}}</p>
+                                    <p class="tip"><i class="glyphicon glyphicon-info-sign"></i>请根据个人情况选择本校或者距离您较近的学校所售课程，否则无法提供线下学习！</p>
+                                    <p class="leader"><a href="leader.html">领学者姓名</a></p>
+                                </div>
+                            </td>
+                            <td class="item-price">￥<span class="goods-price">23.58</span></td>
+                            <td class="item-delete"><i class="glyphicon glyphicon-remove"></i></td>
+                        </tr>
+                        <tr class="cart-item">
+                            <td class="item-checkbox"><input type="checkbox"></td>
+                            <td class="item-course cf">
+                                <a href="course.html" class="coursePic lf"><img src="./images/logo/black_logo_light.png"></a>
+                                <div class="course_detail lf">
+                                    <p class="courseName"><a href="course.html">{{课程名字3}}</a></p>
+                                    <p class="school">{{所在学校}}</p>
+                                    <p class="tip"><i class="glyphicon glyphicon-info-sign"></i>请根据个人情况选择本校或者距离您较近的学校所售课程，否则无法提供线下学习！</p>
+                                    <p class="leader"><a href="leader.html">领学者姓名</a></p>
+                                </div>
+                            </td>
+                            <td class="item-price">￥<span class="goods-price">100.78</span></td>
+                            <td class="item-delete"><i class="glyphicon glyphicon-remove"></i></td>
+                        </tr>
+                        <!-- 以上数据循环，此处为计算总价 -->
+                        <tr class="total_price">
+                            <td class="item-checkbox"></td>
+                            <td class="item-course"></td>
+                            <td class="item-price">
+                                <p class="price_text">总计金额：</p>
+                                <p class="total_text"><i class="glyphicon glyphicon-yen"></i><span class="total_num">0.00</span></p>
+                            </td>
+                            <td class="item-delete">
+                                <button class="btn btn-danger toSubmitOrder" data-toggle="modal">去结算</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 如果未勾选任何商品弹出 -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true" style="margin-top: 90px">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h4>请至少选择1门课程</h4>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">确认</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 如果购物车为空则显示购物车空空如也 -->
+            <div class="no_goods" style="display:none">
+                <h4>购物车里空空如也，<a href="category.html">去逛逛</a></h4>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- 引入底部 -->
+    <iframe src="common/footer.html" style="display:block;" frameborder="0" width="100%" height="85px"></iframe>
+
+    <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+
+            // 购物车里所有商品数量
+            var total_num = $('tbody').children('.cart-item').length;
+            // alert(total_num);
+            $('.page-header .total').text(total_num);
+
+
+            // 点击操作从购物车删除该课程
+            $('tbody .item-delete i').click(function () {
+                console.log($(this).parentsUntil('.cart-item'));
+                $(this).parent('.item-delete').parent('.cart-item').remove();
+                // 将删除后的课程数量传给总数；
+                var total_num = $('tbody').children('.cart-item').length;
+                // console.log(total_num);
+                $('.page-header .total').text(total_num);
+                if (total_num == 0) {
+                    $('.total_price').css('display', 'none');
+                    $('.no_goods').css('display', 'block');
+                }
+            })
+
+            // 获取用户点击的数量
+            $("tbody input[type='checkbox']").bind("click", function () {
+                var select_num = $('tbody input[type="checkbox"]:checked').length;
+                // console.log(select_num);
+                $('.page-header .select_num').text(select_num);
+                var total_num = $('tbody').children('.cart-item').length;
+                // 当用户选中的数量与总数量相等时，默认将全选打钩
+                if (total_num == select_num) {
+                    $('#selectAll').attr('checked', 'checked');
+                } else {
+                    $('#selectAll').removeAttr('checked');
+                }
+                TotalPrice();
+            });
+
+            // 全选
+            $('#selectAll').click(function () {
+                $("tbody input:checkbox").prop("checked", $(this).prop('checked'));
+                var select_num = $('tbody input[type="checkbox"]:checked').length;
+                $('.page-header .select_num').text(select_num);
+                TotalPrice();
+            })
+
+            // 计算总价格
+            function TotalPrice() {
+                var sum = 0;
+                $("tbody .item-checkbox input[type='checkbox']").each(function () {
+                    if (this.checked == true) {
+                        var p_goods = $(this).parent('.item-checkbox').siblings('.item-price').children(
+                            '.goods-price').text();
+                        sum += parseFloat(p_goods);
+                    }
+                })
+                $('.total_text').children('.total_num').text(sum.toFixed(2));
+            }
+
+            // 当未选中任何一个商品时，不提交表单
+            $('.toSubmitOrder').on('click', function () {
+                var select_num = $('tbody input[type="checkbox"]:checked').length;
+                if (select_num > 0) {
+                    $('#myModal').modal({
+                        show: false
+                    })
+                    window.location.href = "submitOrder.html";
+                } else {
+                    $('#myModal').modal({
+                        show: true
+                    })
+                    // alert('请至少选择一件商品');
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

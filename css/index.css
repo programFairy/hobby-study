@@ -136,19 +136,36 @@ header .header_nav li span.num {
 header .header_nav .login_link {
   display: block;
 }
-header .header_nav .avatar {
-  display: none;
-}
+
 header .header_nav .avatar a {
   color: #ffc125;
+  /* 添加控制用户名的宽度，超过显示... */
+  width: 160px;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 header .header_nav .avatar a img {
   display: inline-block;
-  margin-left: 10px;
+  margin-right: 10px;
   width: 30px;
   height: 30px;
   border-radius: 25px;
   border: 1px solid #4A4A4A;
+}
+header .header_nav .avatar .dropdown-menu{
+  width: 160px;
+  margin-top: -15px;
+}
+header .header_nav .avatar .dropdown-menu li{
+  width: 100%;
+}
+header .header_nav .avatar .dropdown-menu li a{
+  color: #333 !important;
+}
+header .header_nav .avatar .dropdown-menu li a:hover{
+  background: none;
+  color: #ffd102 !important;
 }
 header .shopcart {
   display: none;
@@ -247,19 +264,20 @@ header .shopcart .cartlist ul li:hover {
   position: relative;
   float: right;
 }
-.logo .search i {
+.logo .search .btn{
   position: absolute;
-  display: block;
   font-size: 20px;
-  margin-top: 45px;
-  margin-left: 10px;
+  color: #969696;
+  margin-top: -75px;
+  margin-left: 450px;
+  outline: none;
 }
 .logo .search input {
   width: 500px;
   height: 50px;
   border: 1px solid #fdd102;
   border-radius: 25px;
-  text-indent: 45px;
+  text-indent: 20px;
 }
 /*logo和搜索部分结束*/
 /*导航部分*/

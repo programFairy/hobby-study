@@ -15,8 +15,9 @@
         }
 
         .common_header .header_content {
-            width: 1210px;
-            margin: 0 auto;
+            /* width: 1210px;
+            margin: 0 auto; */
+            /* display: flex; */
         }
 
         .common_header .logo {
@@ -29,7 +30,7 @@
         }
 
         .common_header .leftnav {
-            width: 600px;
+            width: 650px;
             height: 80px;
             float: left;
         }
@@ -56,6 +57,7 @@
 
         .common_header .rightnav {
             float: right;
+            /* flex: 1; */
         }
 
         .common_header .rightnav li {
@@ -100,6 +102,9 @@
             margin: -60px 30px;
         }
 
+        .common_header .rightnav li.userInfo {
+            position: relative;
+        }
         .common_header .rightnav li.userInfo ,
         .common_header .rightnav li.userInfo a
         {
@@ -117,11 +122,12 @@
             margin-right: 10px;
         }
         .dropdown_menu{
-            display: none;
+            display: block;
             width: 200px;
             min-height: 160px;
             background: #FCFCFC;
             border-radius: 0 0 8px 8px;
+            position: absolute;
         }
         .dropdown_menu li{
             width: 200px;
@@ -143,9 +149,8 @@
             padding: 0 10px;
         }
 
-        .common_header .rightnav .to_shopcart {
-            position: relative;
-        }
+     
+    
 
         .common_header .shopcart {
             position: absolute;
@@ -279,11 +284,11 @@
             <div class="rightnav">
                 <ul>
                     <li class="to_shopcart"><a href="javascript:;">购物车</a><span class="num">0</span></li>
-                    <li class="login_register">
+                    <li class="login_register" style="display:none">
                         <a href="login.html">登录</a>/
                         <a href="register.html">注册</a>
                     </li>
-                    <li class="userInfo" style="display:none">
+                    <li class="userInfo" >
                         <a href="javascript:;">
                             <img src="../images/logo/logo_light.png">username超过字数显示...
                             <span class="caret"></span>

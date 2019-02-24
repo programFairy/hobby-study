@@ -102,12 +102,19 @@ $(document).ready(function () {
     if ($('.cartlist').css('display') == 'block') {
         var cartnum = $('.cartlist ul li').length;
         $('.shopcart').find('.total').text(cartnum);
+        // if(cartnum > 0){
+        //     $('nocontent').css('display','none');
+        //     $('cartlist').css('display','block');
+        // }else{
+        //     $('nocontent').css('display','block');
+        //     $('cartlist').css('display','none');
+        // }
     } else {
         $('.shopcart').find('.total').text('0');
     }
 
     //鼠标滑动至购物车显示对应的框
-    $('.header_nav li:nth-child(3)').hover(function () {
+    $('.header_nav li a.to_shopcart').hover(function () {
         $('.shopcart').css('display', 'block')
     })
     $('.header_nav li:nth-child(2)').hover(function () {

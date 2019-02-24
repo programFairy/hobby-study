@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>支付中心_趣学网</title>
+    <link rel="shortcut icon" href="light_favicon@32.ico" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/css/reset.css">
+    <link rel="stylesheet" href="css/payWay.css">
+    <link rel="stylesheet" href="lib/iconmoon/payWay/style.css">
+</head>
+
+<body>
+    <!-- 引入头部 -->
+    <iframe src="common/header.html" width="100%" height="80px" frameborder="0" scrolling="no" style="display:block"></iframe>
+
+    <div class="content_wrapper">
+        <div class="content_header">
+            <div class="page-header">
+                <h3>支付中心</h3>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="goods_lists_wrapper">
+                <div class="content_title">
+                    <h5>订单：<span>{{订单编号}}</span></h5>
+                </div>
+                <!-- 数据从此处循还 -->
+                <div class="good_item cf">
+                    <a href="course.html" class="coursePic lf"><img src="./images/bg/bg_3d.png"></a>
+                    <div class="courseInfo lf">
+                        <div class="courseName"><a href="course.html">{{课程名字}}</a></div>
+                        <div class="school">{{领学者所在学校}}</div>
+                        <div class="leaderName"><a href="leader.html">{{领学者姓名}}</a></div>
+                    </div>
+                    <div class="coursePrice rt">￥<span class="p_num">128.08</span></div>
+                </div>
+                <div class="good_item cf">
+                    <a href="course.html" class="coursePic lf"><img src="./images/bg/bg_3d.png"></a>
+                    <div class="courseInfo lf">
+                        <div class="courseName"><a href="course.html">{{课程名字}}</a></div>
+                        <div class="school">{{领学者所在学校}}</div>
+                        <div class="leaderName"><a href="leader.html">{{领学者姓名}}</a></div>
+                    </div>
+                    <div class="coursePrice rt">￥<span class="p_num">22.02</span></div>
+                </div>
+                <div class="good_item cf">
+                    <a href="course.html" class="coursePic lf"><img src="./images/bg/bg_3d.png"></a>
+                    <div class="courseInfo lf">
+                        <div class="courseName"><a href="course.html">{{课程名字}}</a></div>
+                        <div class="school">{{领学者所在学校}}</div>
+                        <div class="leaderName"><a href="leader.html">{{领学者姓名}}</a></div>
+                    </div>
+                    <div class="coursePrice rt">￥<span class="p_num">50.10</span></div>
+                </div>
+                <!-- /数据从此处循还 -->
+
+                <!-- 支付方式选择 -->
+                <div class="payWay">
+                    <h5>支付方式选择</h5>
+                    <div class="way_list cf">
+                        <div class="payway_item active">
+                            <i class="icon-zfbPay"></i>
+                        </div>
+                        <div class="payway_item">
+                            <i class="icon-wechatPay"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- / 支付方式选择-->
+
+                <!-- 商品总计 -->
+                <div class="total_goods">
+                    <div class="item_group_wrapper cf">
+                        <label class="tip lf"><i class="glyphicon glyphicon-info-sign"></i>请在24小时内完成支付，如未完成此订单将自动关闭</label>
+                        <div class="item_group rt">
+                            <label class="title line_title lf">应付：</label>
+                            <span class="price  lf">￥<i class="total_price">0.00</i></span>
+                        </div>
+                    </div>
+
+                    <div class="item_group_wrapper cf">
+                        <div class="item_group rt">
+                            <form action="">
+                                <button type="submit" class="btn btn-danger" id="pay_btn">立即支付</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入底部 -->
+    <iframe src="common/footer.html" style="display:block;" frameborder="0" width="100%" height="85px"></iframe>
+
+    <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            // 点击切换支付方式，切换样式
+            $('.way_list .payway_item').click(function () {
+                $(this).addClass('active').siblings().removeClass('active');
+            })
+
+            // 商品总价
+            TotalPrice();
+
+            function TotalPrice() {
+                var sum = 0;
+                $(".goods_lists_wrapper .good_item").each(function () {
+                    var p_goods = $(this).children('.coursePrice').children('.p_num').text();
+                    sum += parseFloat(p_goods);
+                })
+                $('.item_group .price').children('.total_price').text(sum.toFixed(2));
+            }
+        })
+    </script>
+</body>
+
+</html>

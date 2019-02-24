@@ -48,10 +48,22 @@
 			<ul class="header_nav">
 				<li><a href="#"><i class="icon-notice"></i>消息通知</a></li>
 				<li><a href="#"><i class="icon-courselist"></i>我的学习</a></li>
-				<li><a href="#"><i class="icon-shopcart"></i>购物车</a><span class="num">0</span></li>
+				<li><a href="#" class="to_shopcart"><i class="icon-shopcart"></i>购物车</a><span class="num">0</span></li>
 				<li><a href="#"><i class="icon-application"></i>申请成为领学者</a></li>
-				<li class="login_link"><a href="login.html">登录</a>/<a href="register.html">注册</a></li>
-				<li class="avatar"><a href="javascript:;">username <img src="images/logo/logo_light.png"></a></li>
+				<li class="login_link" style="display:none"><a href="login.html">登录</a>/<a href="register.html">注册</a></li>
+				<li role="presentation" class="dropdown avatar" >
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true"
+					 aria-expanded="false">
+						<img src="images/logo/logo_light.png">test1
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="PersonCenter.html">账号设置</a></li>
+						<li><a href="myOrder.html">我的订单</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">退出</a></li>
+					</ul>
+				</li>
 			</ul>
 			<!-- 购物车 -->
 			<div class="shopcart">
@@ -127,8 +139,12 @@
 	<div class="logo">
 		<img src="images/logo/logo_light_black.png" class="logoImg">
 		<div class="search">
-			<i class="glyphicon glyphicon-search search-ico"></i>
-			<input type="search" placeholder="请输入课程名或者关键词，如吉他...">
+			<form>
+				<input type="search" placeholder="请输入课程名或者关键词，如吉他...">
+				<button type="submit" class="btn btn-link">
+					<i class="glyphicon glyphicon-search search-ico"></i>
+				</button>
+			</form>
 		</div>
 	</div>
 	<!--logo ending-->

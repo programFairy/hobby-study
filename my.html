@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的学习-趣学网</title>
+    <link rel="shortcut icon" href="light_favicon@32.ico" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/css/reset.css">
+    <style>
+        body {
+            background: #eee;
+        }
+        .cover_bg{
+            z-index: 999;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top:0;
+            left: 0;
+            background: #333;
+            opacity: 0.7;
+        }
+        .study_header {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(#FFFACD, #FFEC8B);
+        }
+
+        .study_header .header_content {
+            width: 1210px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .study_header .header_content .left_content {
+            width: 100%;
+        }
+
+        .study_header .header_content .left_content .avatar {
+            width: 120px;
+            height: 120px;
+            margin-top: 30px;
+        }
+
+        .study_header .header_content .left_content .avatar img {
+            width: 100%;
+            height: 100%;
+            border-radius: 80px;
+            border: 5px solid #fff;
+        }
+
+        .study_header .header_content .left_content .username {
+            min-width: 200px;
+            height: 120px;
+            margin: 40px 20px 0 20px;
+        }
+
+        .header_nav {
+            width: 100%;
+            height: 60px;
+            background: #fff;
+        }
+
+        .nav_content {
+            width: 1210px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .nav-list {
+            width: 100%;
+            height: 100%;
+        }
+
+        .nav-list li {
+            float: left;
+            width: 80px;
+            margin-right: 20px;
+            font-size: 16px;
+            line-height: 60px;
+            text-align: center;
+        }
+
+        .nav-list li.active {
+            border-bottom: 2px solid #ffd102;
+        }
+
+        .main_content {
+            width: 1210px;
+            min-height: 380px;
+            margin: 20px auto;
+        }
+        .no_content{
+            width: 100%;
+            text-align: center;
+            height: 260px;
+            margin-top: 80px;
+        }
+        .no_content .btn{
+            margin-top: 20px;
+        }
+        .course_lists .course_item {
+            width: 280px;
+            height: 190px;
+            background: #fff;
+            float: left;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .course_lists .course_item img {
+            width: 100%;
+            height: 130px;
+            margin-bottom: 10px;
+        }
+
+        .cover{
+            width: 100%;
+            height: 130px;
+            background: #333;
+            opacity: 0.4;
+            position: absolute;
+            top:0;
+            left: 0;
+            padding: 10px;
+        }
+        .course_lists .course_item .cancel_love{
+            cursor: pointer;
+            width: 100%;
+            height: 30px;
+            font-size: 22px;
+            text-align: right;
+        }
+        .course_lists .course_item .course_name {
+            width: 100%;
+            padding: 0 20px;
+            font-size: 16px;
+            height: 40px;
+            line-height: 40px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .alert{
+            z-index: 1001;
+            width: 380px;
+            height: 200px;
+            background: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -160px;
+            margin-top: -100px;
+        }
+        .alert .close span{
+            width: 30px;
+            font-size: 40px;
+        }
+        .alert-text{
+            width: 100%;
+            text-align: center;
+            line-height: 100px;
+        }
+        .alert-text i{
+            font-size: 40px;
+            margin-right: 20px;
+            color: #ffd102;
+        }
+        .btn-list{
+            width: 100%;
+            padding: 0 80px;
+        }
+        .alert .btn{
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 引入头部 -->
+    <iframe src="common/header.html" width="100%" height="80px" frameborder="0" scrolling="no" style="display:block"></iframe>
+
+    <div class="cover_bg" style="display:none"></div>
+    <div class="study_header">
+        <div class="header_content">
+            <div class="left_content cf">
+                <div class="avatar lf">
+                    <a href="leader.html">
+                        <img src="./images/logo/black_logo_light.png">
+                    </a>
+                </div>
+                <div class="username lf">
+                    <a href="leader.html">
+                        <h2>{{用户名}}</h2>
+                    </a>
+                    <p>快来看看你学习的足迹,那些时光充实而美好，将来的你一定会感谢现在拼命努力的自己。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header_nav">
+        <div class="nav_content">
+            <ul class="nav-list cf">
+                <li class="active"><a href="javascript:;">课程</a></li>
+                <li><a href="javascript:;">收藏夹</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main_content">
+        <!-- 当没有内容时 -->
+        <div class="no_content" style="display:none">
+            <h3>暂无课程</h3>
+            <a href="category.html" class="btn btn-warning">发现更多课程</a>
+        </div>
+        <ul class="course_lists cf" id="course_list">
+            <li class="course_item">
+                <a href="course.html">
+                    <img src="./images/logo/black_logo_light.png">
+                </a>
+                <p class="course_name"><a href="course.html">{{课程名字}}</a></p>
+            </li>
+            <li class="course_item">
+                <a href="course.html">
+                    <img src="./images/bg/join-step.jpg">
+                </a>
+                <p class="course_name"><a href="course.html">{{课程名字}}</a></p>
+            </li>
+            <li class="course_item">
+                <a href="course.html">
+                    <img src="./images/logo/black_logo_light.png">
+                </a>
+                <p class="course_name"><a href="course.html">{{课程名字}}</a></p>
+            </li>
+            <li class="course_item">
+                <a href="course.html">
+                    <img src="./images/logo/black_logo_light.png">
+                </a>
+                <p class="course_name"><a href="course.html">{{课程名字}}</a></p>
+            </li>
+            <li class="course_item">
+                <a href="course.html">
+                    <img src="./images/logo/black_logo_light.png">
+                </a>
+                <p class="course_name"><a href="course.html">{{课程名字}}</a></p>
+            </li>
+        </ul>
+        <ul class="course_lists cf" id="correct_list" style="display:none">
+            <li class="course_item">
+                <img src="./images/logo/black_logo_light.png">
+                <div class="cover" style="display:none">
+                    <i class="highlight glyphicon glyphicon-heart cancel_love"></i>
+                </div>
+                <p class="course_name"><a href="course.html">{{喜欢课程名字}}</a></p>
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- 你确定放弃收藏该课程？ -->
+    <div class="alert  alert-dismissible" role="alert" style="display:none">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <!-- <strong>你确定放弃收藏该课程？</strong> -->
+        <h4 class="alert-text"><i class="glyphicon glyphicon-info-sign"></i>你确定放弃收藏该课程？</h4>
+        <div class="btn-list">
+            <button class="btn btn-warning">确认</button>
+            <button class="btn btn-default">取消</button>
+        </div>
+    </div>
+
+    <!-- 引入底部 -->
+    <iframe src="common/footer.html" style="display:block;" frameborder="0" width="100%" height="85px"></iframe>
+
+    <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // 点击导航切换样式
+            $('.nav-list li a').click(function () {
+                $(this).parent().addClass('active').siblings().removeClass('active');
+                var menu_nav = $(this).parent().index();
+                $('.main_content ul').eq(menu_nav).css('display', 'block').siblings().css('display',
+                    'none');
+            })
+
+            $('#correct_list .course_item  img').mouseenter(function () {
+                $(this).siblings('.cover').css('display', 'block');
+            })
+
+            $('#correct_list .course_item ').mouseleave(function () {
+                $(this).children('.cover').css('display', 'none');
+            })
+
+            $('.cancel_love').click(function () {
+                $('.cover_bg').css('display', 'block');
+                $('.alert').css('display', 'block');
+                var course_index = $(this);
+    
+                $('.btn-list .btn-warning').click(function() {
+                    $('.cover_bg').css('display', 'none');
+                    $('.alert').css('display', 'none');
+                    course_index.parent().parent('.course_item').remove();
+                })
+                $('.btn-list .btn-default').click(function() {
+                    $('.cover_bg').css('display', 'none');
+                    $('.alert').css('display', 'none');
+                })
+            })
+
+            $('.alert .close').click(function () {
+                $('.cover_bg').css('display', 'none');
+                $('.alert').css('display', 'none');
+            })
+        })
+    </script>
+</body>
+
+</html>

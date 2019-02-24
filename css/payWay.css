@@ -1,0 +1,144 @@
+body {
+  background: #f8fafc;
+}
+.content_wrapper .content_header {
+  width: 100%;
+  height: 150px;
+  background: url(../images/bg/cart_header_bg.jpg) no-repeat 100%;
+  padding-top: 40px;
+}
+.content_wrapper .content_header .page-header {
+  margin: 0;
+  width: 1120px;
+  margin: 0 auto;
+  border: 0;
+}
+.content_wrapper .container {
+  min-height: 500px;
+}
+.content_wrapper .container .goods_lists_wrapper {
+  width: 100%;
+  min-height: 420px;
+  background: #fff;
+  border-radius: 8px;
+  margin-top: -40px;
+  padding: 20px 35px;
+  margin-bottom: 80px;
+}
+.content_wrapper .container .goods_lists_wrapper .content_title {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+.content_wrapper .container .goods_lists_wrapper .good_item {
+  width: 100%;
+  height: 130px;
+  background: #F3F5F7;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+.content_wrapper .container .goods_lists_wrapper .good_item .coursePic img {
+  width: 220px;
+  height: 110px;
+  margin-right: 20px;
+}
+.content_wrapper .container .goods_lists_wrapper .good_item .courseInfo .courseName {
+  width: 530px;
+  min-height: 30px;
+  max-height: 60px;
+  overflow: hidden;
+  font-size: 20px;
+}
+.content_wrapper .container .goods_lists_wrapper .good_item .courseInfo .school,
+.content_wrapper .container .goods_lists_wrapper .good_item .courseInfo .leaderName {
+  width: 530px;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  color: #666;
+}
+.content_wrapper .container .goods_lists_wrapper .good_item .coursePrice {
+  width: 200px;
+  text-align: center;
+  height: 110px;
+  line-height: 110px;
+  color: #E5224C;
+  font-size: 20px;
+}
+.content_wrapper .container .goods_lists_wrapper .payWay {
+  width: 100%;
+  height: 140px;
+  border-top: 1px solid #999;
+  padding-top: 10px;
+}
+.content_wrapper .container .goods_lists_wrapper .payWay .way_list .payway_item {
+  cursor: pointer;
+  float: left;
+  width: 140px;
+  height: 70px;
+  line-height: 80px;
+  text-align: center;
+  background: #F3F5F7;
+  margin-right: 30px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+.content_wrapper .container .goods_lists_wrapper .payWay .way_list .payway_item .icon-zfbPay {
+  font-size: 42px;
+}
+.content_wrapper .container .goods_lists_wrapper .payWay .way_list .payway_item .icon-zfbPay:hover {
+  color: #87CEFF;
+}
+.content_wrapper .container .goods_lists_wrapper .payWay .way_list .payway_item .icon-wechatPay {
+  font-size: 36px;
+}
+.content_wrapper .container .goods_lists_wrapper .payWay .way_list .payway_item .icon-wechatPay:hover {
+  color: #7CCD7C;
+}
+.content_wrapper .container .goods_lists_wrapper .payWay .way_list .payway_item.active {
+  border: 2px solid #ffd102;
+}
+.content_wrapper .container .goods_lists_wrapper .payWay .way_list .payway_item.active .icon-zfbPay {
+  color: #87CEFF;
+}
+.content_wrapper .container .goods_lists_wrapper .payWay .way_list .payway_item.active .icon-wechatPay {
+  color: #7CCD7C;
+}
+.content_wrapper .container .goods_lists_wrapper .total_goods {
+  width: 100%;
+  min-height: 90px;
+  border-top: 1px solid #999;
+  padding-top: 10px;
+}
+.content_wrapper .container .goods_lists_wrapper .total_goods .item_group_wrapper {
+  width: 100%;
+}
+.content_wrapper .container .goods_lists_wrapper .total_goods .item_group_wrapper .tip {
+  line-height: 40px;
+  color: #E5224C;
+}
+.content_wrapper .container .goods_lists_wrapper .total_goods .item_group_wrapper .item_group {
+  min-width: 420px;
+}
+.content_wrapper .container .goods_lists_wrapper .total_goods .item_group_wrapper .item_group .title {
+  width: 230px;
+  text-align: right;
+  font-size: 14px;
+}
+.content_wrapper .container .goods_lists_wrapper .total_goods .item_group_wrapper .item_group .price {
+  min-width: 100px;
+  font-size: 14px;
+  text-align: right;
+  color: #E5224C;
+  font-size: 22px;
+}
+.content_wrapper .container .goods_lists_wrapper .total_goods .item_group_wrapper .item_group .line_title {
+  line-height: 40px;
+}
+.content_wrapper .container .goods_lists_wrapper .total_goods .item_group_wrapper .item_group #pay_btn {
+  margin-top: 10px;
+  margin-left: 260px;
+}

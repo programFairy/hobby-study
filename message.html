@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>消息通知</title>
+    <link rel="shortcut icon" href="light_favicon@32.ico" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/css/reset.css">
+    <style>
+        body{
+            background: #eee;
+        }
+        .container{
+            margin-bottom: 30px;
+        }
+        .content{
+            margin-top: 40px;
+            min-height: 450px;
+        }
+        .left_menu{
+            width: 230px;
+            min-height: 60px;
+            background: #fff;
+        }
+        .left_menu ul li{
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+        }
+        .left_menu ul li.active a{
+            background: #ffd102;
+            color: #fff;
+        }
+        .left_menu ul li a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #333;
+            font-size: 16px;
+            text-indent: 30px;
+        }
+       
+        .right_content{
+            width: 860px;
+            min-height: 30px;
+            margin-left: 30px;
+            background: #fff; 
+            padding:0 20px;
+        }
+        /* 无消息通知 */
+        .no_content{
+            height: 180px;
+            width: 100%;
+            text-align: center;
+            line-height: 180px;
+        }
+        .course_message{
+            width: 100%;
+        }
+        .message_lists .message_item{
+            width: 100%;
+            display: flex;
+            height: 50px;
+            line-height: 50px;
+            font-size: 14px;
+            border-bottom: 1px solid #ccc;
+        }
+        .message_lists .message_item:last-child{
+            border: none;
+        }
+        .message_lists .message_item .message_title{
+            width: 650px;
+            height: 40px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .message_lists .message_item .message_title:hover,
+        .message_lists .message_item .message_title:active,
+        .message_lists .message_item .message_title:link
+        {
+            color: #333;
+        }
+        .message_lists .message_item .message_time{
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 引入头部 -->
+    <iframe src="common/header.html" width="100%" height="80px" frameborder="0" scrolling="no" style="display:block"></iframe>
+
+    <div class="container">
+        <div class="content cf">
+            <div class="left_menu lf">
+                <ul>
+                    <li class="active"><a href="javascript:;">课程通知</a></li>
+                    <li><a href="javascript:;">平台通知</a></li>
+                </ul>
+            </div>
+            <div class="right_content lf">
+                <!-- 当没有消息通知时 -->
+                <div class="no_content" style="display:none">
+                    <h4>当前暂无消息通知</h4>
+                </div>
+
+                <!-- 课程通知 -->
+                <div class="course_message">
+                    <ul class="message_lists">
+                        <li class="message_item">
+                            <a href="javascript:;" class="message_title">{{消息题目,如《课程名称》上架，点击查看}}</a>
+                            <span class="message_time">2019年2月21日 10:45</span>
+                        </li>
+                        <li class="message_item">
+                            <a href="javascript:;" class="message_title">{{消息题目.......点击查看}}</a>
+                            <span class="message_time">2019年2月21日 10:57</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 平台通知 -->
+                <div class="plat_message" style="display:none">
+                    <ul class="message_lists">
+                        <li class="message_item">
+                            <a href="javascript:;" class="message_title">{{平台消息1}}</a>
+                            <span class="message_time">2019年2月21日 10:45</span>
+                        </li>
+                        <li class="message_item">
+                            <a href="javascript:;" class="message_title">{{平台消息2}}</a>
+                            <span class="message_time">2019年2月21日 10:57</span>
+                        </li>
+                        <li class="message_item">
+                            <a href="javascript:;" class="message_title">{{平台消息3}}</a>
+                            <span class="message_time">2019年2月21日 10:45</span>
+                        </li>
+                        <li class="message_item">
+                            <a href="javascript:;" class="message_title">{{平台消息4}}</a>
+                            <span class="message_time">2019年2月21日 10:57</span>
+                        </li>
+                        <li class="message_item">
+                            <a href="javascript:;" class="message_title">{{平台消息5}}</a>
+                            <span class="message_time">2019年2月21日 10:45</span>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入底部 -->
+    <iframe src="common/footer.html" style="display:block;" frameborder="0" width="100%" height="85px"></iframe>
+
+
+    <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // 点击左侧菜单切换样式
+            $('.left_menu ul li a').click(function () {
+                $(this).parent().addClass('active').siblings().removeClass('active');
+                var index_menu = $(this).parent().index();
+                // alert(index_menu);
+                if (index_menu == '0') {
+                    $('.course_message').css('display', 'block');
+                    $('.plat_message').css('display', 'none');
+                } else if (index_menu == '1') {
+                    $('.course_message').css('display', 'none');
+                    $('.plat_message').css('display', 'block');
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

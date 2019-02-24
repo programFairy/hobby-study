@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{搜索的关键词}}_搜索|趣学网</title>
+    <link rel="shortcut icon" href="light_favicon@32.ico" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/css/reset.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+
+<body>
+    <!-- 引入公共头部 -->
+    <iframe src="./common/header.html" frameborder="0" width="100%" height="80px" scrolling="no"></iframe>
+
+    <!-- 搜索条 -->
+    <div id="q_search">
+        <div class="col-sm-offset-3 col-lg-6">
+            <form action="">
+                <div class="input-group search_wrapper">
+                    <span class="searchico"><i class="glyphicon glyphicon-search"></i></span>
+                    <input type="text" class="search" placeholder="请输入课程关键词，领学者姓名...">
+                    <span class="input-group-btn">
+                        <button class="btn search_btn" type="button">搜索</button>
+                    </span>
+                </div><!-- /input-group -->
+            </form>
+        </div><!-- /.col-lg-6 -->
+        <!-- 热搜词推荐 -->
+        <div class="col-sm-offset-3 col-lg-6 search_hot">
+            <ul class="search_list cf">
+                <li class="search_word">热搜关键词：</li>
+                <li class="search_word"><a href="javascript:;">吉他</a></li>
+                <li class="search_word"><a href="javascript:;">爵士舞</a></li>
+                <li class="search_word"><a href="javascript:;">英语口语</a></li>
+                <li class="search_word"><a href="javascript:;">石头画</a></li>
+                <li class="search_word"><a href="javascript:;">滑板</a></li>
+                <li class="search_word"><a href="javascript:;">轮滑</a></li>
+            </ul>
+        </div>
+        <!-- /热搜词推荐 -->
+    </div>
+
+    <div class="container">
+        <!-- 左侧显示搜索结果 -->
+        <div class="col-lg-8 search_result">
+            <div class="result_lists">
+                <div class="result_item cf">
+                    <a href="course.html" class="lf course_img_link">
+                        <img src="./images/logo/black_logo_light.png" class="course_img">
+                    </a>
+                    <div class="course_detail_wrapper lf">
+                        <a href="course.html" class="course_title">{{课程名称}}</a>
+                        <div class="course_leader_wrapper">
+                            <ul class="leader_info cf">
+                                <!-- 此处放兴趣分类：如吉他，爵士舞 -->
+                                <li>{{分类}}</li>
+                                <li><a href="leader.html">{{领学者姓名}}</a></li>
+                                <li>{{领学者所在学校}}</li>
+                                <li>￥ 19.9</li>
+                            </ul>
+                        </div>
+                        <div class="course_introduction">
+                            <p class="introduction">{{课程介绍:这是XXXXX课程介绍，一句话即可,最大高度为60px，宽度为430px，仅为测试当字数超过时样式是否乱}}{{课程介绍:这是XXXXX课程介绍，一句话即可,最大高度为60px，宽度为430px，仅为测试当字数超过时样式是否乱}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="result_item cf">
+                    <a href="course.html" class="lf course_img_link">
+                        <img src="./images/logo/black_logo_light.png" class="course_img">
+                    </a>
+                    <div class="course_detail_wrapper lf">
+                        <a href="course.html" class="course_title">{{课程名称}}</a>
+                        <div class="course_leader_wrapper">
+                            <ul class="leader_info cf">
+                                <!-- 此处放兴趣分类：如吉他，爵士舞 -->
+                                <li>{{分类}}</li>
+                                <li><a href="leader.html">{{领学者姓名}}</a></li>
+                                <li>{{领学者所在学校}}</li>
+                                <li>￥ 19.9</li>
+                            </ul>
+                        </div>
+                        <div class="course_introduction">
+                            <p class="introduction">{{课程介绍:这是XXXXX课程介绍，一句话即可,最大高度为60px，宽度为430px，仅为测试当字数超过时样式是否乱}}{{课程介绍:这是XXXXX课程介绍，一句话即可,最大高度为60px，宽度为430px，仅为测试当字数超过时样式是否乱}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /左侧显示搜索结果 -->
+
+        <!-- 右侧相关推荐 -->
+        <div class="col-lg-4 right_content">
+            <div class="search_recommend">
+                <div class="title cf">
+                    <h4 class="search_word lf">搜索词</h4>
+                    <h4 class="lf">相关推荐</h4>
+                </div>
+
+                <div class="recommend_lists">
+                    <div class="recommend_item cf">
+                        <a href="leader.html" class="leaderProfile lf">
+                            <img src="./images/logo/light_logo.png">
+                        </a>
+                        <div class="leaderInfo lf">
+                            <a href="leader.html" class="leaderName">{{leaderName}}</a>
+                            <p class="school">{{领学者所在学校}}</p>
+                            <p class="leaderIntro">领学者介绍</p>
+                        </div>
+                    </div>
+                    <div class="recommend_item cf">
+                        <a href="leader.html" class="leaderProfile lf">
+                            <img src="./images/logo/light_logo.png">
+                        </a>
+                        <div class="leaderInfo lf">
+                            <a href="leader.html" class="leaderName">{{leaderName}}</a>
+                            <p class="school">{{领学者所在学校}}</p>
+                            <p class="leaderIntro">领学者介绍</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /右侧相关推荐 -->
+    </div>
+
+    <!-- 引入底部 -->
+    <iframe src="./common/footer.html" frameborder="0" scrolling="no" width="100%" height="80px"></iframe>
+</body>
+
+</html>

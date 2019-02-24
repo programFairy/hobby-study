@@ -1,0 +1,220 @@
+body {
+    background: #F8FAFC;
+}
+
+.container {
+    margin: 20px auto;
+    display: flex;
+
+    .left_menu {
+        width: 180px;
+        min-height: 200px;
+        float: left;
+
+        .menu_item {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+
+            a {
+                font-size: 16px;
+            }
+
+            a:hover {
+                color: #333;
+            }
+
+            i {
+                float: right;
+                line-height: 40px;
+            }
+        }
+
+        .menu_item.active {
+
+            a,
+            i {
+                color: #ffd102;
+            }
+        }
+
+        .menu_title {
+            margin-bottom: 20px;
+            height: 50px;
+            font-size: 20px;
+            border-bottom: 1px solid #999;
+        }
+    }
+
+    .right_content {
+        flex: 1;
+        min-height: 530px;
+        padding-left: 30px;
+
+        .myOrder_wrapper {
+            .myOrder_header {
+                height: 50px;
+                margin-bottom: 20px;
+
+                .title {
+                    margin-right: 40px;
+                    font-size: 20px;
+                    font-weight: 700;
+                    width: 120px;
+                    border-right: 1px solid #999;
+                }
+
+                .nav-pills>li.active>a {
+                    background-color: #ffd102;
+                }
+
+                .nav>li>a:hover {
+                    color: #333;
+                }
+            }
+            .order_nocontent{
+                width: 100%;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+            }
+            .myOrder_body {
+                .order_item {
+                    width: 100%;
+                    min-height: 240px;
+                    background: #fff;
+                    border-radius: 10px;
+                    padding: 0px 30px 30px 30px;
+                    margin-bottom: 20px;
+                    .order_header {
+                        width: 100%;
+                        height: 50px;
+                        line-height: 50px;
+                        font-size: 14px;
+                        border-bottom: 1px solid #999;
+                        margin-bottom: 20px;
+
+                        i {
+                            color: #ffd102;
+                            width: 30px;
+                        }
+
+                        .order_date {
+                            color: #666;
+                            margin-left: 20px;
+                        }
+                    }
+
+                    .order_body {
+                        .order_detail {
+                            height: 140px;
+
+                            .course_pic {
+                                width: 200px;
+                                height: 120px;
+                                margin-right: 20px;
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+
+                            .course_detail {
+                                width: 360px;
+                                height: 120px;
+
+                                .courseName {
+                                    font-size: 18px;
+                                }
+
+                                .price {
+                                    color: red;
+                                }
+                            }
+
+                            .course_price {
+                                width: 160px;
+                                height: 120px;
+                                line-height: 120px;
+                                color: red;
+                                font-size: 26px;
+                                text-align: center;
+                            }
+
+                            .order_status {
+                                height: 120px;
+                                line-height: 120px;
+                                font-size: 16px;
+                            }
+                        }
+
+                        .order_detail:last-child {
+                            border-bottom: 1px solid #999;
+                        }
+                    }
+
+                    .order_footer{
+                        padding-right: 80px; 
+                        .total_price{
+                            font-size: 20px;
+                            .price_red{
+                                color: red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .myPocket{
+            .myPocket_header{
+                height: 50px;
+                font-size: 20px;
+                font-weight: 700;
+            }
+            .mypocket_body{
+                width: 100%;
+                min-height: 340px;
+                background: #fff;
+                border-radius: 10px;
+                .balance{
+                    width: 100%;
+                    height: 120px;
+                    background: #ffd102;
+                    border-radius: 10px 10px 0 0;
+                    padding: 20px 30px;
+                    color: #fff;
+                    .cur_balance{
+                        min-width: 180px;
+                        p{
+                            font-size: 16px;
+                        }
+                        .price_num{
+                            font-size: 24px;
+                        }
+                    }
+                    .recharge{
+                        button{
+                            background: #fff;
+                            color: #ffd102;
+                            border-radius: 25px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+
+            .mypocket_note{
+                padding: 40px 0;
+                width: 100%;
+                height: 170px;
+                text-align: center;
+                i{
+                    color: #999;
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+}
